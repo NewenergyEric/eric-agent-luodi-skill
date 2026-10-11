@@ -1,0 +1,8 @@
+{
+  "recipes": {
+    "1.0.0": "221c2965188c039569c103e6c4eec747b2f7086a63fe4c46da8af2e88e3389cc",
+    "1.1.0": "6a89b0c0d9acc8b57dc202d0f87cc786e164d0a61b452c62281d251f1737aa96"
+  },
+  "schema": 1,
+  "source": "bundled://safe-order-summary"
+}

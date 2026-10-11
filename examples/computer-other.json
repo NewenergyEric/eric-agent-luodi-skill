@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "target": {
+    "location": "other",
+    "os": "macos",
+    "access": "existing"
+  },
+  "agent": "undecided",
+  "first_task": "to_define"
+}

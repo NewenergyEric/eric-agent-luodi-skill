@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "command": "python -B -m unittest discover -s tests -v",
+  "tests": 60,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "scope": "Windows local configuration, read-only system routing, isolation, recovery and public release/media boundaries",
+  "initial_invocation": "Wrong working directory: four test module import errors; rerun from the project root passed."
+}

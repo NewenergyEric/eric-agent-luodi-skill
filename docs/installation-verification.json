@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "date_utc": "2026-10-11T15:11:19+00:00",
+  "project": "client-setup",
+  "status": "passed",
+  "scope": "fresh_allowlisted_export_on_Windows_with_bundled_synthetic_orders",
+  "python_version": "3.12.10",
+  "dependencies": "Python_standard_library_only",
+  "commands": [
+    "python -B -m unittest discover -s tests -v",
+    "python -B demo.py"
+  ],
+  "unit_tests": {
+    "passed": 61,
+    "failures": 0,
+    "errors": 0
+  },
+  "install_version": "1.0.0",
+  "update_version": "1.1.0",
+  "idempotence": "passed_no_managed_file_rewrite",
+  "customer_override_preservation": "passed_CNY_and_minimum_total_20",
+  "interruption_recovery": "passed",
+  "acceptance": {
+    "business": {
+      "result": {
+        "currency": "CNY",
+        "largest_order": "27.50",
+        "order_count": 2,
+        "total": "47.50",
+        "version": "1.1.0"
+      },
+      "scope": "bundled_synthetic_orders_only",
+      "status": "passed"
+    },
+    "installation": "passed",
+    "loading": {
+      "agent_runtime": "not_verified",
+      "local_harness": "passed"
+    }
+  },
+  "verified_runtime_files": {
+    "client_setup.py": "d8181fea269b59a5a71f828cfed694565af16cbab05116db4ad003b547435243",
+    "demo.py": "6b2e20fe1a335e1fd5a96366b0f42bd606a14cd7bed1269ab7d3cf1b38420b3f",
+    "packages/1.0.0/SKILL.md": "b14a45c5f0f356e71360ac678b7473483fd374dcadbc49599587b278d2f55029",
+    "packages/1.0.0/defaults.json": "d568819afa82c84730cee209e5c6ad583933fb163be2d101091178c0b1ef3389",
+    "packages/1.0.0/orders.csv": "302b6050dc9954c27ca5cfbe6541e7b8c3c474630c7640a2ab748636baab533b",
+    "packages/1.0.0/summarize.py": "2a8d13d5bed65137f5e2a422a69d758fe3ed36de6f501d591a814c11528036e0",
+    "packages/1.1.0/SKILL.md": "e48fcfc5a8c5f55dddfcc9d94fcc57dab2fe3406dbfa25e5d4e8e6f07bc49e09",
+    "packages/1.1.0/defaults.json": "d568819afa82c84730cee209e5c6ad583933fb163be2d101091178c0b1ef3389",
+    "packages/1.1.0/orders.csv": "302b6050dc9954c27ca5cfbe6541e7b8c3c474630c7640a2ab748636baab533b",
+    "packages/1.1.0/summarize.py": "abf79060fc3210dd332789b07499486fe5e00f60ce9392035ecd22d4f0d09f19",
+    "recipes/1.0.0.json": "221c2965188c039569c103e6c4eec747b2f7086a63fe4c46da8af2e88e3389cc",
+    "recipes/1.1.0.json": "6a89b0c0d9acc8b57dc202d0f87cc786e164d0a61b452c62281d251f1737aa96",
+    "sources.lock.json": "281090d84debe87f32cf34b25d7095b2a4500c0d005f5391a7d40ebb12d534a8",
+    "tools/computer_guide.py": "8ba9d8f3d2d778a0de259865d4f6d2cf63f7d99685b1e9bed28db5f3f5851bf2"
+  },
+  "evidence_boundary": "Runtime and pinned package hashes identify the code tested. Documentation and this evidence file are not self-hashed. Full archive bytes and Git commit tree are separately checked before private delivery.",
+  "not_verified": [
+    "Mac_execution",
+    "dependency_installation",
+    "remote_access",
+    "real_Agent_installation_and_Skill_loading",
+    "real_customer_task"
+  ],
+  "redaction": "New projection of allowlisted result fields; no local identity, absolute paths, plan IDs, private receipts or credential values."
+}

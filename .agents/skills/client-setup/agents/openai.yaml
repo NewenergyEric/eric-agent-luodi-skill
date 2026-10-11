@@ -1,0 +1,4 @@
+interface:
+  display_name: "Client Setup"
+  short_description: "Configure, check, and update isolated customer examples"
+  default_prompt: "Use $client-setup to configure or check this customer sandbox."

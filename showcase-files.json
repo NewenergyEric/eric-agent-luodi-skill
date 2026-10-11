@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "files": {
+    "assets/readme/hero-zh.mp4": {
+      "bytes": 1943674,
+      "sha256": "dd276678cca28e9b212ff12bacc669f4887db9c88a423db7a8360eceba9b1974"
+    },
+    "assets/readme/hero-zh.gif": {
+      "bytes": 5754213,
+      "sha256": "4cdec69ab730531f08ddf4bccf5e2aaae096ab58c92e1beaf85909f92f88b283"
+    },
+    "assets/readme/hero-zh.webp": {
+      "bytes": 2805800,
+      "sha256": "228034d6d7847d5e756ce161d8fa134a412a0ef1239d8a9e6f6581a074b3a0cd"
+    },
+    "assets/readme/hero-zh.png": {
+      "bytes": 341108,
+      "sha256": "bb62474458a26512b5eed6613f965768c63c2ea467d48cd9e8ea450cd0b212ad"
+    },
+    "assets/readme/case-board-zh.png": {
+      "bytes": 538405,
+      "sha256": "0dea5943f7bf6847cc3b7cc90fb00d03bc7c7b380a65c6e1fee0624cb11a777d"
+    },
+    "motion/public/fonts/setup-sans.woff2": {
+      "bytes": 104532,
+      "sha256": "3ae8319347cfbc72534337befa399e3799022846b445f18f4d9bfbfaada87f42"
+    }
+  }
+}

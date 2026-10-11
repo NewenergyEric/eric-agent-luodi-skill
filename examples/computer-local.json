@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "target": {
+    "location": "local",
+    "os": "windows",
+    "access": "local"
+  },
+  "agent": "undecided",
+  "first_task": "to_define"
+}

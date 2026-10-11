@@ -1,0 +1,182 @@
+{
+  "status": "passed",
+  "host_os": "Windows",
+  "unit_tests": {
+    "passed": 60,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "guide_cli_cases": [
+    {
+      "acceptance": {
+        "agent_loading": "not_verified",
+        "installation": "not_run",
+        "real_task": "not_run"
+      },
+      "access_route": "local_executor_no_ssh_needed",
+      "action": "configure",
+      "agent": "undecided",
+      "blockers": [
+        "agent_choice_required",
+        "first_real_task_required",
+        "dependency_installer_not_implemented",
+        "network_diagnostics_not_implemented",
+        "real_agent_adapter_not_implemented",
+        "agent_skill_loading_not_verified",
+        "real_task_not_run"
+      ],
+      "changes_applied": false,
+      "current_executable_scope": [
+        "windows_local_synthetic_package"
+      ],
+      "deployment_ready": false,
+      "executor_os": "windows",
+      "next_steps": [
+        "verify_local_instance_and_permission",
+        "review_environment_and_pinned_dependencies",
+        "review_network_requirements",
+        "review_pinned_agent_recipe",
+        "show_diff_and_recovery_before_approval",
+        "configure_project_skills_preserving_overrides",
+        "verify_installation_loading_and_task_separately",
+        "save_receipt_for_next_conversation"
+      ],
+      "requested_instance": {
+        "customer": "sample",
+        "identity_verified": false,
+        "instance": "local"
+      },
+      "schema": 1,
+      "status": "guidance_only",
+      "target": {
+        "access": "local",
+        "location": "local",
+        "os": "windows"
+      },
+      "target_inspected": false
+    },
+    {
+      "acceptance": {
+        "agent_loading": "not_verified",
+        "installation": "not_run",
+        "real_task": "not_run"
+      },
+      "access_route": "local_executor_no_ssh_needed",
+      "action": "check",
+      "agent": "undecided",
+      "blockers": [
+        "declared_os_does_not_match_local_executor",
+        "macos_execution_not_implemented",
+        "agent_choice_required",
+        "first_real_task_required",
+        "dependency_installer_not_implemented",
+        "network_diagnostics_not_implemented",
+        "real_agent_adapter_not_implemented",
+        "agent_skill_loading_not_verified",
+        "real_task_not_run"
+      ],
+      "changes_applied": false,
+      "current_executable_scope": [],
+      "deployment_ready": false,
+      "executor_os": "windows",
+      "next_steps": [
+        "verify_local_instance_and_permission",
+        "review_environment_and_pinned_dependencies",
+        "review_network_requirements",
+        "review_pinned_agent_recipe",
+        "show_diff_and_recovery_before_approval",
+        "configure_project_skills_preserving_overrides",
+        "verify_installation_loading_and_task_separately",
+        "save_receipt_for_next_conversation"
+      ],
+      "requested_instance": {
+        "customer": "sample",
+        "identity_verified": false,
+        "instance": "local"
+      },
+      "schema": 1,
+      "status": "guidance_only",
+      "target": {
+        "access": "local",
+        "location": "local",
+        "os": "macos"
+      },
+      "target_inspected": false
+    },
+    {
+      "acceptance": {
+        "agent_loading": "not_verified",
+        "installation": "not_run",
+        "real_task": "not_run"
+      },
+      "access_route": "reuse_authorized_connection",
+      "action": "update",
+      "agent": "undecided",
+      "blockers": [
+        "remote_access_not_verified",
+        "macos_execution_not_implemented",
+        "agent_choice_required",
+        "first_real_task_required",
+        "dependency_installer_not_implemented",
+        "network_diagnostics_not_implemented",
+        "real_agent_adapter_not_implemented",
+        "agent_skill_loading_not_verified",
+        "real_task_not_run"
+      ],
+      "changes_applied": false,
+      "current_executable_scope": [],
+      "deployment_ready": false,
+      "executor_os": "windows",
+      "next_steps": [
+        "verify_target_identity_and_authorized_access",
+        "review_environment_and_pinned_dependencies",
+        "review_network_requirements",
+        "review_pinned_agent_recipe",
+        "show_diff_and_recovery_before_approval",
+        "configure_project_skills_preserving_overrides",
+        "verify_installation_loading_and_task_separately",
+        "save_receipt_for_next_conversation"
+      ],
+      "requested_instance": {
+        "customer": "sample",
+        "identity_verified": false,
+        "instance": "local"
+      },
+      "schema": 1,
+      "status": "guidance_only",
+      "target": {
+        "access": "existing",
+        "location": "other",
+        "os": "macos"
+      },
+      "target_inspected": false
+    }
+  ],
+  "path_escape_cli": "blocked",
+  "isolated_demo": {
+    "status": "passed",
+    "acceptance": {
+      "installation": "passed",
+      "loading": {
+        "local_harness": "passed",
+        "agent_runtime": "not_verified"
+      },
+      "business": {
+        "status": "passed",
+        "scope": "bundled_synthetic_orders_only",
+        "result": {
+          "currency": "CNY",
+          "largest_order": "27.50",
+          "order_count": 2,
+          "total": "47.50",
+          "version": "1.1.0"
+        }
+      }
+    }
+  },
+  "macos_actual_execution": "not_run",
+  "remote_connection": "not_run",
+  "agent_installation": "not_run",
+  "real_user_task": "not_run"
+}

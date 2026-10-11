@@ -1,0 +1,85 @@
+{
+  "schema_version": "1",
+  "capabilities": [
+    {
+      "id": "CAP-LOCAL",
+      "claim": "Configure, replay, update and recover the pinned local example package",
+      "status": "verified",
+      "evidence_ids": [
+        "E-DEMO"
+      ]
+    },
+    {
+      "id": "CAP-SYSTEM-GUIDE",
+      "claim": "Read-only Windows/Mac and local/other-machine routing, with unimplemented execution clearly blocked",
+      "status": "verified",
+      "evidence_ids": [
+        "E-SYSTEM-GUIDE"
+      ]
+    },
+    {
+      "id": "CAP-WORKSTATION",
+      "claim": "Prepare a new Mac or Windows computer with dependencies, a real Agent, Skills and a first useful task",
+      "status": "planned",
+      "evidence_ids": []
+    },
+    {
+      "id": "CAP-FIRST-TASK-ILLUSTRATION",
+      "claim": "An authored meeting-note example illustrates the intended first-task acceptance",
+      "status": "illustrated",
+      "evidence_ids": [
+        "E-FIRST-TASK-ILLUSTRATION"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "E-DEMO",
+      "kind": "behavioral_trial",
+      "path": "docs/evidence.json",
+      "sha256": "39500a4a112a570ed655a4d859a766e64b73e8a4a58a537fb7652b7f2b8e3abf",
+      "outcome": "pass",
+      "scope": "Windows local sandbox with synthetic orders only; agent loading not verified"
+    },
+    {
+      "id": "E-SYSTEM-GUIDE",
+      "kind": "tool_run",
+      "path": "docs/system-guide-evidence.json",
+      "sha256": "d5c81e0698982c7d0642d4d5721080daf857814baf8407590c1e6ed81496b807",
+      "outcome": "pass",
+      "scope": "Windows subprocess CLI and unit tests; Mac input routing simulated, not tested on a Mac; no remote or Agent installation"
+    },
+    {
+      "id": "E-FIRST-TASK-ILLUSTRATION",
+      "kind": "source_observation",
+      "path": "examples/first-task/action-list.md",
+      "sha256": "ce6b266b67800eb3b62a40f4c194abf76a49e23286f5ee2b7d477b7fef91c0a4",
+      "outcome": "pass",
+      "scope": "Authored synthetic illustration only. No installed Agent produced this file."
+    }
+  ],
+  "cases": [
+    {
+      "id": "CASE-DEMO",
+      "request": "Install, replay, update, inject interruption and resume the synthetic example",
+      "status": "passed",
+      "evidence_ids": [
+        "E-DEMO"
+      ]
+    },
+    {
+      "id": "CASE-SYSTEM-GUIDE",
+      "request": "Route local Windows, Mac and existing remote access without installation or connections; reject path escape",
+      "status": "passed",
+      "evidence_ids": [
+        "E-SYSTEM-GUIDE"
+      ]
+    },
+    {
+      "id": "CASE-REAL-WORKSTATION",
+      "request": "Deploy a real Agent on a new computer and complete the first customer task",
+      "status": "not_run",
+      "evidence_ids": []
+    }
+  ]
+}

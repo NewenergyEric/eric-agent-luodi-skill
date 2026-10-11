@@ -1,0 +1,13 @@
+{
+  "illustrative_only": true,
+  "status": "completed",
+  "plan_id": "<confirmed-plan-id>",
+  "identity": {"customer":"sample","instance":"local","host_fingerprint":"<local-host-fingerprint>","target":"<project>/sandboxes/sample/local"},
+  "version": "1.1.0",
+  "acceptance": {
+    "installation": "passed",
+    "loading": {"local_harness":"passed","agent_runtime":"not_verified"},
+    "business": {"status":"passed","scope":"bundled_synthetic_orders_only","result":{"currency":"CNY","order_count":2,"total":"47.50","largest_order":"27.50","version":"1.1.0"}}
+  },
+  "continue": "python client_setup.py check --customer sample --instance local"
+}

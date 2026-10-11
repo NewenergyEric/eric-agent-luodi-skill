@@ -1,0 +1,28 @@
+{
+  "files": [
+    {
+      "sha256": "b14a45c5f0f356e71360ac678b7473483fd374dcadbc49599587b278d2f55029",
+      "source": "SKILL.md",
+      "target": ".agents/skills/safe-order-summary/SKILL.md"
+    },
+    {
+      "sha256": "2a8d13d5bed65137f5e2a422a69d758fe3ed36de6f501d591a814c11528036e0",
+      "source": "summarize.py",
+      "target": ".agents/skills/safe-order-summary/scripts/summarize.py"
+    },
+    {
+      "sha256": "302b6050dc9954c27ca5cfbe6541e7b8c3c474630c7640a2ab748636baab533b",
+      "source": "orders.csv",
+      "target": ".agents/skills/safe-order-summary/assets/orders.csv"
+    },
+    {
+      "sha256": "d568819afa82c84730cee209e5c6ad583933fb163be2d101091178c0b1ef3389",
+      "source": "defaults.json",
+      "target": ".client-setup/public.json"
+    }
+  ],
+  "package": "safe-order-summary",
+  "schema": 1,
+  "source": "bundled://safe-order-summary@1.0.0",
+  "version": "1.0.0"
+}

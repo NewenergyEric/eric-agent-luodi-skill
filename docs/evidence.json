@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-11",
+  "scope": "Windows project-local synthetic demonstration; no customer data",
+  "command": "python -B demo.py",
+  "runtime_sha256": "269f2c07004091fb282d1e0110a346235ec8f4c829f74d0e3e0d47eb4a4f6b89",
+  "synthetic_input_sha256": "302b6050dc9954c27ca5cfbe6541e7b8c3c474630c7640a2ab748636baab533b",
+  "status": "passed",
+  "idempotence": "passed_no_managed_file_rewrite",
+  "recovery": "passed",
+  "update_files": [
+    {
+      "path": ".agents/skills/safe-order-summary/SKILL.md",
+      "change": "replace"
+    },
+    {
+      "path": ".agents/skills/safe-order-summary/assets/orders.csv",
+      "change": "keep"
+    },
+    {
+      "path": ".agents/skills/safe-order-summary/scripts/summarize.py",
+      "change": "replace"
+    },
+    {
+      "path": ".client-setup/effective.json",
+      "change": "keep"
+    },
+    {
+      "path": ".client-setup/public.json",
+      "change": "keep"
+    }
+  ],
+  "settings": {
+    "currency": "CNY",
+    "minimum_total": 20
+  },
+  "acceptance": {
+    "business": {
+      "result": {
+        "currency": "CNY",
+        "largest_order": "27.50",
+        "order_count": 2,
+        "total": "47.50",
+        "version": "1.1.0"
+      },
+      "scope": "bundled_synthetic_orders_only",
+      "status": "passed"
+    },
+    "installation": "passed",
+    "loading": {
+      "agent_runtime": "not_verified",
+      "local_harness": "passed"
+    }
+  },
+  "redaction": "A new projection of allowlisted fields; local identity, absolute paths, plan IDs and full receipts excluded."
+}

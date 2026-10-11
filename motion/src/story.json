@@ -1,0 +1,62 @@
+{
+  "scope": "Target deployment workflow; real Agent installation not implemented",
+  "language_rendered": "zh",
+  "duration_seconds": 24,
+  "fps": 30,
+  "scenes": [
+    {
+      "seconds": [
+        0,
+        3.6
+      ],
+      "title": "一台新电脑，配成 Agent 工作机。",
+      "claim": "target_workflow",
+      "visual": "Mac/Windows and requested Agent; first-task request"
+    },
+    {
+      "seconds": [
+        3.6,
+        7.6
+      ],
+      "title": "先选系统，再核对环境。",
+      "claim": "verified_local_read_only_routing",
+      "visual": "Local/other-machine route; environment metadata; installation gaps"
+    },
+    {
+      "seconds": [
+        7.6,
+        12
+      ],
+      "title": "备齐环境，配好 Agent。",
+      "claim": "planned_installation",
+      "visual": "Dependencies, Agent and Skills; unimplemented adapters clearly labeled"
+    },
+    {
+      "seconds": [
+        12,
+        15.8
+      ],
+      "title": "第一项工作，要有具体成果。",
+      "claim": "authored_synthetic_illustration",
+      "visual": "Meeting notes to action list; no claimed Agent execution"
+    },
+    {
+      "seconds": [
+        15.8,
+        20.4
+      ],
+      "title": "安装到结果，分别验收。",
+      "claim": "verified_foundation_and_explicit_gaps",
+      "visual": "Routing, local package, overrides and recovery; real install/loading/task remain open"
+    },
+    {
+      "seconds": [
+        20.4,
+        24
+      ],
+      "title": "技能继续加，客户定制留下。",
+      "claim": "verified_foundation_with_target_handoff",
+      "visual": "configure/check/update; separate overrides and continuation record"
+    }
+  ]
+}
