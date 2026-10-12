@@ -31,12 +31,17 @@ class ReleaseTests(unittest.TestCase):
         (self.root / "release-files.json").write_bytes(cs.encode(self.manifest))
 
     def test_clean_source_passes_without_claiming_publication_ready(self):
-        report, payloads = release.check(self.root)
-        self.assertEqual(report["status"], "passed")
-        self.assertEqual(set(payloads), set(self.manifest["files"]))
-        self.assertFalse(report["publication_ready"])
-        self.assertIn("license_not_selected", report["publication_blockers"])
-        self.assertEqual("upstream_license_review_pending" in report["publication_blockers"], self.manifest["upstream_review"] != "completed")
+        for license_status in ("not_selected", "selected"):
+            with self.subTest(license_status=license_status):
+                self.manifest["license_status"] = license_status
+                self.write_manifest()
+                report, payloads = release.check(self.root)
+                self.assertEqual(report["status"], "passed")
+                self.assertEqual(set(payloads), set(self.manifest["files"]))
+                self.assertFalse(report["publication_ready"])
+                self.assertEqual("license_not_selected" in report["publication_blockers"], license_status == "not_selected")
+                self.assertIn("git_history_review_required", report["publication_blockers"])
+                self.assertEqual("upstream_license_review_pending" in report["publication_blockers"], self.manifest["upstream_review"] != "completed")
 
     def test_private_files_are_never_read_or_archived(self):
         marker = "SYNTHETIC_PRIVATE_SENTINEL_" + uuid.uuid4().hex
@@ -183,6 +188,7 @@ class ReleaseTests(unittest.TestCase):
 
     def test_license_cannot_be_marked_selected_without_file(self):
         self.manifest["license_status"] = "selected"
+        self.manifest["files"] = [name for name in self.manifest["files"] if name != "LICENSE"]
         self.write_manifest()
         with self.assertRaisesRegex(release.ReleaseError, "license_file_missing"):
             release.check(self.root)

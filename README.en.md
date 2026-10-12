@@ -28,7 +28,7 @@ Use `examples/computer-local.json` for Windows. `--brief` emits a read-only prep
 
 ## Connecting another computer
 
-The SSH helper belongs to the separate [`dahao` Skill](https://github.com/NewenergyEric/dahao/tree/main/.agents/skills/dahao). Its Windows helper assists with identifying the target; Mac uses the system's Remote Login route. Follow [Dahao's connection checklist](https://github.com/NewenergyEric/dahao/blob/main/.agents/skills/dahao/references/connection-checklist.md) to confirm the host fingerprint, account, and target identity. If already on the target, use the local route.
+Dahao manages repository access separately. The SSH helper belongs to the separate [`dahao` Skill](https://github.com/NewenergyEric/dahao/tree/main/.agents/skills/dahao). Its Windows helper assists with identifying the target; Mac uses the system's Remote Login route. Follow [Dahao's connection checklist](https://github.com/NewenergyEric/dahao/blob/main/.agents/skills/dahao/references/connection-checklist.md) to confirm the host fingerprint, account, and target identity. If already on the target, use the local route.
 
 Install Dahao in the helper's Codex and ask it to prepare the other Mac, defaulting to OpenClaw: confirm the target, review access, reuse existing tools, then proceed within the specific authorization. Keep connection details in private session records.
 
@@ -59,4 +59,4 @@ python -B tools/release.py check
 
 [Rebuild the film](motion/README.md) · [Publication and privacy rules](docs/publishing.md) · [Sources and licensing](THIRD_PARTY_NOTICES.md)
 
-The blue FDE project is maintained independently. Publication and licensing follow the author's announcement and license files.
+The blue FDE project is maintained independently. Original code, documentation and synthetic assets are licensed under [Apache-2.0](LICENSE). Copyright 2026 NewenergyEric and contributors. Third-party materials retain their own licenses. Read the [security and privacy guidance](docs/security.md) before submitting an issue.

@@ -30,7 +30,7 @@ customers、machines、sandboxes、.control、.demo-runs、.test-runs、validati
 
 有历史时 release.py 将 git_history_review_required 列为人工审查项；不因此自动删历史或重写提交。首次公开前对提交树的文件清单、blob 哈希和消息单独审核，记录确切提交。
 
-license_status 与 upstream_review 表示当前授权/来源核对状态；未选项目 LICENSE 时 publication_ready=false。作者选择后才更新状态。本轮用户已授权目标账号下 luodi（原 client-setup）的私有仓库更名与更新，许可证不从参考仓库自动继承。
+license_status 与 upstream_review 表示当前授权/来源核对状态。作者已确认原创内容授权并选择 Apache-2.0；第三方材料保留原许可。公开前还要检查远端所有分支、标签、提交元数据、GitHub 发行资产与 CI 日志。只有当前提交与审查字节一致且获作者授权，才改变仓库可见性。
 
 更多来源与各自许可见 [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md)。
 
@@ -38,4 +38,4 @@ license_status 与 upstream_review 表示当前授权/来源核对状态；未�
 
 每次当前版本交付附用户价值说明、HTML 使用流程、可勾选安装清单和独立导出副本的安装验证，分别记录安装、本地加载、真实 Agent 加载与业务范围。入口为 getting-started.html、installation-checklist.md 与 installation-verification.json。只更新证据中实际复测的内容；未实现的安装步骤保留待办。
 
-私有仓库也只提交 release-files.json 列出的已审字节。首次提交前检查完整暂存树、文件 hash、提交身份与消息，保留本地审阅记录。许可证未选择时 publication_ready 仍为 false，这不自动授权公开开源或更改仓库可见性。
+私有或公开仓库都只提交 release-files.json 列出的已审字节。每次发布检查完整暂存树、文件 hash、提交身份与消息，保留本地审阅记录。离线工具保留 git_history_review_required 人工关口；独立审查记录将该关口与确切提交绑定，不通过修改工具或删除历史来绕过。

@@ -27,7 +27,7 @@
 <div class="toolbar"><button id="copy" type="button">复制清单给 Agent</button><button id="download" type="button" class="secondary">下载清单</button><button id="print" type="button" class="secondary">打印</button><button id="reset" type="button" class="secondary">重置</button></div><p class="notice" id="notice" role="status"></p>
 <p class="note">本页记录选择与人工勾选，保存在当前浏览器。切换方案会清空勾选，避免沿用旧方案的完成状态；不收集任何秘密值。</p>
 <details class="review"><summary>运行示例与继续开发</summary><p>在 Windows + Python 3.12+ 中打开项目根目录，运行隔离示例，查看配置包的安装、更新、覆盖保留与恢复流程：</p><pre>python -B demo.py</pre><p>这张清单用于规划与记录，不运行系统安装。各执行入口的范围、实现缺口和复现记录集中在开发资料中。</p><p><a href="support-matrix.md">执行范围</a> · <a href="validation.md">验证文档</a> · <a href="installation-verification.json">示例运行记录</a></p></details>
-<footer>落地 · luodi · 蓝色 FDE · 配置 / 检查 / 更新<br>完整路线是交付目标；勾选不触发安装。首次使用先取得仓库访问权限，再下载或克隆项目。</footer>
+<footer>落地 · luodi · 蓝色 FDE · 配置 / 检查 / 更新<br>完整路线是交付目标；勾选不触发安装。首次使用先下载或克隆项目，再打开本清单。</footer>
 </main><script>
 (()=>{'use strict';const $=id=>document.getElementById(id),boxes=[...document.querySelectorAll('[data-step]')],ids=['system','location','network','workspace','agent','skills'],key='client-setup:install-checklist:v2';
 const names={env:'依赖环境',network:'网络通路',workspace:'Codex / IDE',agent:'日常 Agent 安装',behavior:'行为约束文件（不含 SOUL / USER）',skills:'Skills 安装与加载',acceptance:'真实任务验收与接续'};

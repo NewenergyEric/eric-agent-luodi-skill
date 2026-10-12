@@ -43,7 +43,7 @@ Windows 路线使用 `examples/computer-local.json`。[分系统准备说明](do
 
 ## 要帮另一台电脑：SSH 小工具在搭好
 
-连接工具随独立的 [`dahao` Skill](https://github.com/NewenergyEric/dahao/tree/main/.agents/skills/dahao) 一起提供；本仓库的 `luodi` 负责交付清单与配置包流程。
+搭好单独管理仓库访问权限。连接工具随独立的 [`dahao` Skill](https://github.com/NewenergyEric/dahao/tree/main/.agents/skills/dahao) 一起提供；本仓库的 `luodi` 负责交付清单与配置包流程。
 
 - **Windows：** 使用搭好的双击连接小助手，核对目标电脑并交接必要信息。
 - **Mac：** 使用系统“远程登录”，按[搭好的连接清单](https://github.com/NewenergyEric/dahao/blob/main/.agents/skills/dahao/references/connection-checklist.md#b-目标是-mac)核对账户、主机指纹与目标身份。
@@ -96,4 +96,4 @@ python -B tools/release.py check
 
 [Skill 使用记录](docs/skill-usage.md) · [视频重建](motion/README.md) · [发布与隐私规则](docs/publishing.md) · [来源与许可](THIRD_PARTY_NOTICES.md)
 
-蓝色 FDE 版本独立维护。公开发布与许可安排以作者公告及许可文件为准。
+蓝色 FDE 版本独立维护。原创内容使用 [Apache-2.0](LICENSE)，Copyright 2026 NewenergyEric and contributors；第三方材料保留各自许可。提交问题前请阅读[安全与隐私说明](docs/security.md)。

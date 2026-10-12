@@ -1,6 +1,10 @@
-# 来源与许可状态
+# 来源与许可
 
-落地 · luodi 的项目许可证尚待作者选择。下面只记录第三方材料自身的来源与许可，不替本项目选择授权条款。
+Copyright 2026 NewenergyEric and contributors.
+
+作者确认拥有原创内容的授权权利，并选择 [Apache License 2.0](LICENSE) 用于本项目原创代码、文档及合成素材。SPDX：`Apache-2.0`。第三方材料保留各自许可与版权声明，不因项目许可而改为 Apache-2.0。
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this work except in compliance with the License. You may obtain a copy at https://www.apache.org/licenses/LICENSE-2.0 . Unless required by applicable law or agreed to in writing, this work is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND. See the License for the specific language governing permissions and limitations under the License.
 
 ## 运行器与设计参考
 
