@@ -1,6 +1,6 @@
 # Luodi · Agent Setup and Delivery
 
-**Turn a new computer into a place where an Agent can do useful work.**
+**Windows / Mac: one Agent handoff workflow, with a checklist and evidence.**
 
 [中文](README.md) · [Interactive guide (Chinese)](docs/getting-started.html) · [Installation checklist](docs/installation-checklist.md) · [Isolated validation](docs/installation-verification.json)
 
@@ -8,9 +8,11 @@ Download the HTML and open it locally to use its checklist and copy controls. ·
 
 The intended workflow starts with a new Mac or Windows computer: select the Agent, check the environment and dependencies, review the deployment plan, configure the runtime and Skills, then validate one concrete customer task. Keep custom settings when adding or updating Skills, and leave a record that the next conversation can continue.
 
-Current execution covers the Windows project-local example package, updates/recovery, and read-only target routing. Mac execution, dependency installation, and real Agent installation and Skill loading remain unimplemented.
+Both platforms follow the same seven steps: dependencies, network access, Codex/IDE, daily Agent, behavior rules, Skills, and acceptance. On Windows, identify the actual execution environment; on Mac, check macOS, Apple silicon or Intel, the terminal, and directory permissions. Reuse working tools and settings.
 
-![Chinese workflow preview](assets/readme/hero-zh.gif)
+Windows and Mac guidance is available. Verified execution still covers the Windows project-local example package and updates/recovery. Mac device execution, dependency installation, and real Agent installation and Skill loading remain unverified or unimplemented. See the [platform preparation and evidence scope](docs/computer-guide.md).
+
+![Chinese Windows/Mac workflow preview](assets/readme/hero-zh.gif)
 
 [Local player](docs/watch.html) · [Chinese MP4](assets/readme/hero-zh.mp4?raw=true) · [WebP](assets/readme/hero-zh.webp?raw=true) · [Transcript and evidence scope](docs/demo.md)
 
@@ -22,7 +24,7 @@ Open this project in Codex and use [.agents/skills/luodi/SKILL.md](.agents/skill
 
 > Prepare an Agent on this customer's new computer. First identify Mac or Windows and whether you are already on the target. Check the environment and dependencies. The first task is turning meeting notes into actions with owners and due dates. Show the plan and missing capabilities before changes, then verify installation, loading, and task outcome separately.
 
-If the executor is already on the target, use it locally without enabling SSH. For another computer, verify explicitly authorized existing access or report that access is missing. The current tool does not connect remotely.
+If the executor is already on the target, use it locally without enabling SSH. For another computer, verify explicitly authorized existing access or report that access is missing. The current tool does not connect remotely. The separate Dahao project provides a Windows example of authorized access, reuse of an existing OpenClaw runtime, a small task, and access revocation; that result does not establish Mac execution in Luodi.
 
 ```powershell
 python -B client_setup.py configure --customer sample --brief examples/computer-local.json

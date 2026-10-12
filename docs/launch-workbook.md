@@ -1,3 +1,11 @@
+# Windows / Mac 流程介绍更新 · 2026-10-12
+
+用户确认搭好最近实测为 Windows，Mac 先写流程支持。本次沿用 github-product-launch 与 skill-launch-studio，突出双系统准备路线，补充 Mac 芯片、终端和权限检查；文案、七步清单、中文视频、字幕与证据说明同步更新。执行范围仍为 Windows 本项目合成包；Mac 实机及真实 Agent 安装与加载待接入。保留原蓝色、字体与逐帧动效。
+
+以下为历史记录，当前材料以上方范围为准。
+
+---
+
 # 落地 · luodi 更名记录 · 2026-10-12
 
 用户已选定蓝色 FDE 产品名「落地 · luodi」，项目 Skill `$luodi`。本轮沿用 github-product-launch 与 skill-launch-studio 的更名、媒体复核和私有发布流程，只更新品牌及受影响入口，保留蓝色视觉和现有运行范围。价值说明、七步清单、行为模板和隔离验证继续交付；真实 Agent 安装与加载仍未接入。

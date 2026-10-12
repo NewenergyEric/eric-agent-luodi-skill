@@ -8,13 +8,15 @@
 
 ## 先选择
 
-- 电脑：Windows / Mac；就在这台 / 另一台。
+- 电脑：Windows / Mac；就在这台 / 另一台。Windows 确认实际运行方式；Mac 确认 macOS、Apple 芯片或 Intel、终端与目录权限。
 - 网络：复用可用通路或直连 / Clash Verge Rev / 用户指定工具。
 - 准备工具：Codex / VS Code + Agent 扩展 / Cursor / 现有工具。
 - 日常 Agent：OpenClaw（默认）/ Hermes / 用户指定。
 - Skills：第一件任务所需 / 用户审核清单 / 检查现有 Skills。
 
 选择改变后重新核对完成项。另一台电脑先由当地执行器检查，不自动建立连接。只准备实际需要的依赖，不把所有选项一起安装。
+
+Windows / Mac 都有流程支持。当前本项目实测为 Windows 沙箱示例；Mac 实机验收待接入。[分系统准备与搭好参考范围](computer-guide.md#系统准备与验收)。
 
 ## 1. 依赖环境
 

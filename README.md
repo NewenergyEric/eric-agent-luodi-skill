@@ -1,6 +1,6 @@
 # 落地 · luodi
 
-**让新电脑里，有一个能干活的 Agent。**
+**Windows / Mac，一套有清单、有验收的 Agent 交付流程。**
 
 [English](README.en.md) · FDE 本地验证版
 
@@ -10,11 +10,13 @@ HTML 下载后用浏览器打开，可保存勾选进度、复制命令和打印
 
 落地是面向 FDE 的 Agent 电脑配置与交付 Skill。从一台新 Mac 或 Windows 电脑开始，确定客户要用的 Agent，检查环境与依赖，按可审查的计划配置运行器和 Skills，再用第一项具体工作验收。交付后继续添加、更新技能，保留客户的定制，并让下一段对话接着维护。
 
-这是完整交付的产品目标。**当前已验证 Windows 项目内配置包、更新恢复和只读目标分流；Mac 执行、依赖自动安装、真实 Agent 安装与加载尚未接入。**
+Windows 和 Mac 都按「依赖 → 网络通路 → Codex/IDE → 日常 Agent → 行为规则 → Skills → 验收」推进。Windows 先确认实际运行方式；Mac 先确认 macOS、Apple 芯片或 Intel、终端和目录权限。已有可用工具与配置优先复用。
+
+**当前支持双系统流程引导；已实测的是 Windows 项目内配置包、更新恢复和只读目标分流。Mac 实机执行、依赖自动安装、真实 Agent 安装与加载尚待验证或接入。** [查看分系统准备与验收](docs/computer-guide.md#系统准备与验收)。
 
 <picture>
   <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/hero-zh.png">
-  <img src="assets/readme/hero-zh.gif" width="100%" alt="24秒蓝色流程演示：选择新电脑与Agent、检查环境、规划部署、演示第一项工作、分层验收、保留定制继续更新。未实现的部署步骤明确标注。">
+  <img src="assets/readme/hero-zh.gif" width="100%" alt="24秒蓝色 Windows/Mac 流程演示：分系统检查环境、选择 Agent、规划部署、验收任务并保留定制。Windows 示例通过，Mac 实机待验证。">
 </picture>
 
 [本地播放器](docs/watch.html) · [中文 MP4](assets/readme/hero-zh.mp4?raw=true) · [GIF](assets/readme/hero-zh.gif?raw=true) · [轻量 WebP](assets/readme/hero-zh.webp?raw=true) · [分镜与证据边界](docs/demo.md)
@@ -33,8 +35,8 @@ HTML 下载后用浏览器打开，可保存勾选进度、复制命令和打印
 
 | 选择 | 当前可做的事 |
 |---|---|
-| Windows 本机 | 已实测项目内配置包的配置、检查、更新与恢复 |
-| Mac | 可生成只读引导计划；执行适配未实现，也未在 Mac 实测 |
+| Windows 本机 | 先确认系统、架构及实际运行方式；项目内示例的配置、检查、更新与恢复已实测 |
+| Mac | 已纳入七步清单与只读引导；先查 macOS、芯片、终端与权限，Mac 安装执行和实机验收待接入 |
 | 执行器就在目标电脑 | 使用本地执行器，无需为了配置额外启用 SSH |
 | 另一台电脑 | 区分已有授权接入与缺少接入；当前不建立连接、不假定远端已检查 |
 | Codex / OpenClaw / Hermes | 本机只读版本探测；真实安装、配置及 Skill 加载仍待接入 |
@@ -91,7 +93,9 @@ python -B demo.py
 
 当前没有依赖自动安装、网络配置、远程接入、真实 Agent 部署或服务控制；Clash 仅可选版本探测。工具不读取凭据值、代理订阅、cookie、聊天或客户数据，不修改系统代理、TUN、防火墙或 SSH。
 
-下一条实现路径是确定一个目标系统、一个固定版本的 Agent 和一项真实任务，依次接入预检、依赖配方、运行器安装、Skill 加载及业务验收。详细缺口见[电脑准备引导](docs/computer-guide.md)。
+借鉴独立项目「搭好」的已验证做法：先核对目标与具体授权、复用已有运行器、用小任务验收，并在交付后收回临时访问。它目前可核对的实测是 Windows + 既有 OpenClaw，不能替代落地的 Mac 验收。[参考范围](docs/computer-guide.md#借鉴搭好的范围)
+
+下一步按一个具体 Windows 或 Mac 目标、一个固定版本的 Agent 和一项真实任务逐层接入。详细缺口见[电脑准备引导](docs/computer-guide.md)。
 
 <details>
 <summary>验证、源码与维护</summary>

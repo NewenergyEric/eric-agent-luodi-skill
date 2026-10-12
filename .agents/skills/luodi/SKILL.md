@@ -5,9 +5,9 @@ description: 在本 Windows 项目内为新客户配置、检查或更新隔离�
 
 # 落地 · luodi
 
-面向 FDE 的客户配置、验收与持续维护。先把目标与证据对齐，再在当前支持范围内执行。
+面向 FDE 的 Windows / Mac 客户准备流程、验收与持续维护。先把目标与证据对齐，再在当前支持范围内执行。参考搭好已验证的顺序时，仅借鉴文档中的通用做法；不得继承别的目标授权或把 Windows 结果视为 Mac 实测。
 
-先确认目标是 Windows 还是 Mac、当前执行器是否就在目标电脑；用户未提供时只问缺失项。本机无需 SSH，另一台电脑先核实并复用明确授权的连接，没有接入就停在引导。读项目根目录的 docs/computer-guide.md 与 docs/support-matrix.md；用三个原有入口的 `--brief examples/computer-local.json`（或 computer-mac.json / computer-other.json）生成只读分流。该计划不安装、不连接、不能用 --approve 执行。Mac 仅有引导分支，未在 Mac 实测；真实 Agent 部署依旧未接入。只有 Windows 本机示例需求才继续下面的可执行循环。
+先确认目标是 Windows 还是 Mac、当前执行器是否就在目标电脑；用户未提供时只问缺失项。本机无需 SSH，另一台电脑先核实并复用明确授权的连接，没有接入就停在引导。读项目根目录的 docs/computer-guide.md 与 docs/support-matrix.md；用三个原有入口的 `--brief examples/computer-local.json`（或 computer-mac.json / computer-other.json）生成只读分流。该计划不安装、不连接、不能用 --approve 执行。Windows / Mac 均提供七步流程支持。Windows 核对实际运行方式；Mac 核对 macOS、Apple 芯片或 Intel、终端与目录权限。Mac 执行仍未在本项目实测；真实 Agent 部署依旧未接入。只有 Windows 本机示例需求才继续下面的可执行循环。
 
 首次 check 若返回 not_installed，不据此宣称完整身份已核验；在 configure 预览中核对 host、target、customer、instance 后才确认。
 

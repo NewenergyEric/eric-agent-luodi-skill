@@ -1,4 +1,4 @@
 interface:
   display_name: "落地 · luodi"
-  short_description: "Configure, check, and update isolated customer examples"
+  short_description: "Guide Windows/Mac preparation; verify supported local examples"
   default_prompt: "Use $luodi to configure or check this customer sandbox."

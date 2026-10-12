@@ -8,20 +8,20 @@
   "errors": [],
   "assets": {
     "hero-zh.mp4": {
-      "bytes": 1904220,
-      "sha256": "ed9075f6a39bfd88a2af6513f4745678d2c48dcd5eed8dd192320594f3f236a0"
+      "bytes": 1915818,
+      "sha256": "a25a87d7ce9e1e4d9e3e29e3489723bc6711fb44bbfcaf5931ed79c2147ab0d8"
     },
     "hero-zh.webp": {
-      "bytes": 2792058,
-      "sha256": "978fc112a1573bc5c2ade88193ef29d80603e0f4b70d846f79daab7d2504f4e8"
+      "bytes": 2828046,
+      "sha256": "4869100029ae9c0092761afec8e84591ed6d5382d10fb2b0d7e541f205166db0"
     },
     "hero-zh.gif": {
-      "bytes": 5876833,
-      "sha256": "36bd29264d566de8aeb60c57454584c3b71d23b26df763a87971e756b04d92a3"
+      "bytes": 5940872,
+      "sha256": "f90d1b0807e5fee30f27af0c73d4ec4a4dcc3db157f7042bc1100a67e0c9883e"
     },
     "hero-zh.png": {
-      "bytes": 340039,
-      "sha256": "593e07cc2a1a43fa15be4b6e23268cd152c86ec3fa7c35c43bcd361ef873eb17"
+      "bytes": 342920,
+      "sha256": "6e525332d13fa8386e40b3f4f47f8800d78950f9472e471b107627d1b60e89d9"
     }
   },
   "observed": [
@@ -31,14 +31,14 @@
       "frames": 720,
       "duration_seconds": 24,
       "faststart": true,
-      "bytes": 1904220
+      "bytes": 1915818
     },
     {
       "file": "hero-zh.webp",
       "fps": 20,
       "frames": 480,
       "duration_seconds": 24.0,
-      "bytes": 2792058,
+      "bytes": 2828046,
       "budget": 3145728
     },
     {
@@ -46,7 +46,7 @@
       "fps": 20,
       "frames": 480,
       "duration_seconds": 24.0,
-      "bytes": 5876833,
+      "bytes": 5940872,
       "budget": 6291456
     }
   ],
@@ -65,15 +65,17 @@
   },
   "font_check": {
     "status": "passed",
-    "glyphs_checked": 323,
+    "glyphs_checked": 357,
     "missing": 0,
     "source_sha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da",
-    "subset_sha256": "7614f8063f41afcce927e05058e32279d1334dd2466e8fc6b7987975dfbb2302",
-    "bytes": 74632
+    "subset_sha256": "e2004fb7011452dbe4ea42633e1c9afba16e810b8571e1adb3182ab6c848467b",
+    "bytes": 83584
   },
   "visual_review": {
     "representative_frames": [
       80,
+      180,
+      310,
       550,
       680
     ],
@@ -81,7 +83,7 @@
     "preserved_blue_style": true,
     "full_playback": "passed"
   },
-  "scope": "Brand rename only; current Windows local package is verified, real Agent installation and loading remain unimplemented.",
+  "scope": "Windows/Mac preparation guidance; Windows local package verified, Mac real-device execution and real Agent installation/loading remain pending.",
   "browser_playback": {
     "duration": 24,
     "currentTime": 24,
@@ -93,23 +95,31 @@
     "console_errors": []
   },
   "html_review": {
-    "readme_preview": "GitHub Markdown API rendering with local audited assets",
+    "readme_preview": "GitHub Markdown API with final local assets",
     "readme_images_loaded": true,
-    "checklist_saved_progress": true,
-    "checklist_agent_choice_persisted": true,
-    "checklist_defaults_restored": true,
-    "narrow_layouts": {
-      "guide": {
+    "checklist": {
+      "status": "passed",
+      "mac_choice_persistence": true,
+      "progress_persistence": true,
+      "changing_location_resets_progress": true,
+      "mac_and_other_location_combined_note": true,
+      "narrow_layout": {
         "viewport": 390,
         "clientWidth": 375,
         "scrollWidth": 375
       },
-      "player": {
-        "viewport": 390,
-        "clientWidth": 390,
-        "scrollWidth": 390
-      }
-    },
-    "viewport_restored": true
+      "console_errors": [],
+      "restored": {
+        "system": "windows",
+        "location": "local",
+        "checked": 0
+      },
+      "viewport_restored": true
+    }
+  },
+  "platform_scope": {
+    "Windows": "local_synthetic_package_verified",
+    "Mac": "guidance_only_real_device_pending",
+    "Dahao_reference": "Windows_existing_runtime_verification_only"
   }
 }
