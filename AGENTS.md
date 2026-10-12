@@ -1,6 +1,6 @@
 # 项目约定
 
-先读 README.md 和 .agents/skills/client-setup/SKILL.md。本机若有 DELIVERY.md 或 OPEN_SOURCE_PREP.md，再读作私有接续记录；公共制品不包含它们。
+先读 README.md 和 .agents/skills/luodi/SKILL.md。本机若有 DELIVERY.md 或 OPEN_SOURCE_PREP.md，再读作私有接续记录；公共制品不包含它们。
 用户入口仅 configure / check / update；执行仍只支持 Windows、本项目沙箱和合成示例包。--brief 增加 Windows/Mac、本机/另一台的只读引导，不等于支持安装。保留 FDE 定位、蓝色叙事与既有媒体；亲民粉色产品是独立项目。
 不读取或复制既有凭据、订阅、cookie、聊天或客户数据；凭据仅引用。
 不连接客户机器、全局安装、启停 Agent、改代理/TUN/防火墙/SSH或部署客户目标。本轮已明确授权建立并推送经审核的私有开发仓库；公开开源发布仍须先确定许可证与版权，不代选法律授权。
@@ -11,3 +11,5 @@ demo.py 只在独立 .demo-runs 中创建合成实例。状态在 .control/lates
 公开文件必须逐项列入 release-files.json 并审阅；不包含客户、日志、回执、备份。许可证由作者决定。
 
 交付默认包含用户价值、docs/getting-started.html、docs/installation-checklist.md 和当前可用版的隔离安装验证。未接入能力保留未完成状态。
+
+产品名为「落地 · luodi」，项目 Skill 为 `$luodi`，面向 FDE 的客户配置、验收与维护。保留蓝色、现有字体与动效；粉色「搭好 · dahao」独立维护。更名不迁移底层 client_setup.py、实例标识或既有状态路径。

@@ -1,4 +1,4 @@
-# Client Setup · Agent 电脑配置助手
+# 落地 · luodi
 
 **让新电脑里，有一个能干活的 Agent。**
 
@@ -8,7 +8,7 @@
 
 HTML 下载后用浏览器打开，可保存勾选进度、复制命令和打印。
 
-从一台新 Mac 或 Windows 电脑开始，确定客户要用的 Agent，检查环境与依赖，按可审查的计划配置运行器和 Skills，再用第一项具体工作验收。交付后继续添加、更新技能，保留客户的定制，并让下一段对话接着维护。
+落地是面向 FDE 的 Agent 电脑配置与交付 Skill。从一台新 Mac 或 Windows 电脑开始，确定客户要用的 Agent，检查环境与依赖，按可审查的计划配置运行器和 Skills，再用第一项具体工作验收。交付后继续添加、更新技能，保留客户的定制，并让下一段对话接着维护。
 
 这是完整交付的产品目标。**当前已验证 Windows 项目内配置包、更新恢复和只读目标分流；Mac 执行、依赖自动安装、真实 Agent 安装与加载尚未接入。**
 
@@ -17,13 +17,13 @@ HTML 下载后用浏览器打开，可保存勾选进度、复制命令和打印
   <img src="assets/readme/hero-zh.gif" width="100%" alt="24秒蓝色流程演示：选择新电脑与Agent、检查环境、规划部署、演示第一项工作、分层验收、保留定制继续更新。未实现的部署步骤明确标注。">
 </picture>
 
-[中文 MP4](assets/readme/hero-zh.mp4?raw=true) · [GIF](assets/readme/hero-zh.gif?raw=true) · [轻量 WebP](assets/readme/hero-zh.webp?raw=true) · [分镜与证据边界](docs/demo.md)
+[本地播放器](docs/watch.html) · [中文 MP4](assets/readme/hero-zh.mp4?raw=true) · [GIF](assets/readme/hero-zh.gif?raw=true) · [轻量 WebP](assets/readme/hero-zh.webp?raw=true) · [分镜与证据边界](docs/demo.md)
 
 影片展示目标流程和已有验证基础。会议纪要转行动清单是原创合成任务示意，尚未由真实运行器执行；没有把计划或回复包装成部署成功。
 
 ## 打开项目，从客户的一句话开始
 
-在 Codex 中打开项目并使用 [`client-setup` Skill](.agents/skills/client-setup/SKILL.md)。已有本机执行器时直接检查本机；另一台电脑先核实系统和已授权的接入方式。
+在 Codex 中打开项目并使用 [`$luodi` Skill](.agents/skills/luodi/SKILL.md)。已有本机执行器时直接检查本机；另一台电脑先核实系统和已授权的接入方式。
 
 > 帮我给客户的新电脑配置 Agent。先确认是 Mac 还是 Windows、这次在哪台电脑执行，再检查环境与依赖。第一项工作是把会议纪要整理成带负责人和截止时间的行动清单。先给我看计划、缺口和影响，确认后再执行；安装、加载和工作结果分别验收。
 
@@ -85,7 +85,7 @@ python -B demo.py
 
 下一段对话可以说：
 
-> 读取本项目的 client-setup Skill 和该实例的 `.control/latest` 回执。先核对目标并 check，再分别报告安装、加载和业务状态，继续未完成的工作。
+> 读取本项目的 luodi Skill 和该实例的 `.control/latest` 回执。先核对目标并 check，再分别报告安装、加载和业务状态，继续未完成的工作。
 
 ## 边界与下一步
 

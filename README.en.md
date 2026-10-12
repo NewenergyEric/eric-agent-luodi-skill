@@ -1,4 +1,4 @@
-# Client Setup · Agent Computer Setup
+# Luodi · Agent Setup and Delivery
 
 **Turn a new computer into a place where an Agent can do useful work.**
 
@@ -12,13 +12,13 @@ Current execution covers the Windows project-local example package, updates/reco
 
 ![Chinese workflow preview](assets/readme/hero-zh.gif)
 
-[Chinese MP4](assets/readme/hero-zh.mp4?raw=true) · [WebP](assets/readme/hero-zh.webp?raw=true) · [Transcript and evidence scope](docs/demo.md)
+[Local player](docs/watch.html) · [Chinese MP4](assets/readme/hero-zh.mp4?raw=true) · [WebP](assets/readme/hero-zh.webp?raw=true) · [Transcript and evidence scope](docs/demo.md)
 
 The film illustrates the intended workflow. Its meeting-notes-to-action-list example is an authored synthetic illustration, not a successful run through a deployed Agent. The previous English film is excluded from the current release; this revision renders Chinese only.
 
 ## Start with the customer task
 
-Open this project in Codex and use [.agents/skills/client-setup/SKILL.md](.agents/skills/client-setup/SKILL.md).
+Open this project in Codex and use [.agents/skills/luodi/SKILL.md](.agents/skills/luodi/SKILL.md).
 
 > Prepare an Agent on this customer's new computer. First identify Mac or Windows and whether you are already on the target. Check the environment and dependencies. The first task is turning meeting notes into actions with owners and due dates. Show the plan and missing capabilities before changes, then verify installation, loading, and task outcome separately.
 

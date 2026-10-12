@@ -25,7 +25,7 @@ SAFE_TOP = {"docs", "examples", "packages", "recipes", "tests", "tools", ".agent
 SAFE_ROOT = {"README.md", "AGENTS.md", "THIRD_PARTY_NOTICES.md", "client_setup.py", "demo.py",
              "sources.lock.json", "release-files.json", ".gitignore", ".gitattributes", "LICENSE",
              "README.en.md", "product-evidence.json", "showcase-files.json"}
-SKILL_FILES = {".agents/skills/client-setup/SKILL.md", ".agents/skills/client-setup/agents/openai.yaml"}
+SKILL_FILES = {".agents/skills/luodi/SKILL.md", ".agents/skills/luodi/agents/openai.yaml"}
 MAX_TOTAL = 64 * 1024 * 1024
 MAX_BINARY = 8 * 1024 * 1024
 BINARY_SLOTS = {f"assets/readme/hero-{lang}.{ext}" for lang in ("zh", "en") for ext in ("mp4", "gif", "webp", "png")}
@@ -277,7 +277,7 @@ def build(root=ROOT):
             archive.writestr(member, data)
     data = stream.getvalue()
     verify_zip(data, payloads)
-    relative = f".release/client-setup-{cs.digest(data)[:16]}.zip"
+    relative = f".release/luodi-{cs.digest(data)[:16]}.zip"
     archive_path = cs.safe(Path(root), relative)
     if archive_path.exists():
         if archive_path.stat().st_size > MAX_TOTAL or archive_path.read_bytes() != data:

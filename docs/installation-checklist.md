@@ -1,4 +1,4 @@
-# Client Setup · Agent 电脑安装清单
+# 落地 · luodi · Agent 电脑安装清单
 
 [交互清单](getting-started.html) · [当前示例验证记录](installation-verification.json)
 
@@ -35,7 +35,7 @@
 ## 3. Codex / IDE
 
 - [ ] 安装或复用所选工具；由用户完成登录，从正确仓库下载/克隆项目后打开根目录。
-- [ ] 读取 `.agents/skills/client-setup/SKILL.md`；核对文件权限与实际工作目录。
+- [ ] 读取 `.agents/skills/luodi/SKILL.md`；核对文件权限与实际工作目录。
 - [ ] 完成一个不含私人数据的小任务，确认准备工具可用。
 
 入口：[Codex 官方开始说明](https://developers.openai.com/codex/quickstart)。VS Code / Cursor 从其各自官方站点选择系统对应安装包；选择 IDE 时另外确认所需 Agent 扩展，IDE 本身不等于 Agent 已配置。

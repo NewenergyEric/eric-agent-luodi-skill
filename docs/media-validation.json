@@ -8,20 +8,20 @@
   "errors": [],
   "assets": {
     "hero-zh.mp4": {
-      "bytes": 1943674,
-      "sha256": "dd276678cca28e9b212ff12bacc669f4887db9c88a423db7a8360eceba9b1974"
+      "bytes": 1904220,
+      "sha256": "ed9075f6a39bfd88a2af6513f4745678d2c48dcd5eed8dd192320594f3f236a0"
     },
     "hero-zh.webp": {
-      "bytes": 2805800,
-      "sha256": "228034d6d7847d5e756ce161d8fa134a412a0ef1239d8a9e6f6581a074b3a0cd"
+      "bytes": 2792058,
+      "sha256": "978fc112a1573bc5c2ade88193ef29d80603e0f4b70d846f79daab7d2504f4e8"
     },
     "hero-zh.gif": {
-      "bytes": 5754213,
-      "sha256": "4cdec69ab730531f08ddf4bccf5e2aaae096ab58c92e1beaf85909f92f88b283"
+      "bytes": 5876833,
+      "sha256": "36bd29264d566de8aeb60c57454584c3b71d23b26df763a87971e756b04d92a3"
     },
     "hero-zh.png": {
-      "bytes": 341108,
-      "sha256": "bb62474458a26512b5eed6613f965768c63c2ea467d48cd9e8ea450cd0b212ad"
+      "bytes": 340039,
+      "sha256": "593e07cc2a1a43fa15be4b6e23268cd152c86ec3fa7c35c43bcd361ef873eb17"
     }
   },
   "observed": [
@@ -31,14 +31,14 @@
       "frames": 720,
       "duration_seconds": 24,
       "faststart": true,
-      "bytes": 1943674
+      "bytes": 1904220
     },
     {
       "file": "hero-zh.webp",
       "fps": 20,
       "frames": 480,
       "duration_seconds": 24.0,
-      "bytes": 2805800,
+      "bytes": 2792058,
       "budget": 3145728
     },
     {
@@ -46,7 +46,7 @@
       "fps": 20,
       "frames": 480,
       "duration_seconds": 24.0,
-      "bytes": 5754213,
+      "bytes": 5876833,
       "budget": 6291456
     }
   ],
@@ -55,84 +55,61 @@
     "package_media.py": "c49ec914e9d617e3a7e6b099c58df1839572feb5fefd63e3846b4929dad1eaca",
     "check_media.py": "8b2f1560ee4ea1f8010c125863a36ea84324e625769f536592d5ac865fca977f"
   },
+  "brand": "落地 · luodi",
+  "date": "2026-10-12",
   "encoding": {
     "mp4_crf": 21,
     "webp_quality": 78,
     "gif_colors": 24,
     "gif_bayer_scale": 5
   },
-  "previous_attempt": {
-    "gif_colors": 32,
-    "gif_bytes": 6455747,
-    "outcome": "gif_over_budget"
-  },
-  "browser_playback": {
-    "duration": 24,
-    "currentTime": 24,
-    "ended": true,
-    "paused": true,
-    "readyState": 4,
-    "error": null,
-    "sampledSeconds": [
-      0,
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      12,
-      13,
-      14,
-      15,
-      16,
-      17,
-      18,
-      19,
-      20,
-      21,
-      22,
-      23,
-      24
-    ],
-    "width": 1280,
-    "height": 720
-  },
-  "browser_gif": {
-    "complete": true,
-    "width": 800,
-    "height": 450
-  },
-  "full_decode": {
-    "mp4": "passed",
-    "gif": "passed"
+  "font_check": {
+    "status": "passed",
+    "glyphs_checked": 323,
+    "missing": 0,
+    "source_sha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da",
+    "subset_sha256": "7614f8063f41afcce927e05058e32279d1334dd2466e8fc6b7987975dfbb2302",
+    "bytes": 74632
   },
   "visual_review": {
     "representative_frames": [
       80,
-      180,
-      310,
-      430,
       550,
       680
     ],
-    "encoded_frames": [
-      "gif_task",
-      "mp4_acceptance"
-    ],
-    "scope": "Representative frame and boundary review; not frame-by-frame human inspection."
-  },
-  "font_check": {
     "status": "passed",
-    "glyphs_checked": 322,
-    "missing": 0,
-    "source_sha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da",
-    "subset_sha256": "3ae8319347cfbc72534337befa399e3799022846b445f18f4d9bfbfaada87f42",
-    "bytes": 104532
+    "preserved_blue_style": true,
+    "full_playback": "passed"
+  },
+  "scope": "Brand rename only; current Windows local package is verified, real Agent installation and loading remain unimplemented.",
+  "browser_playback": {
+    "duration": 24,
+    "currentTime": 24,
+    "ended": true,
+    "error": null,
+    "paused": true,
+    "videoWidth": 1280,
+    "videoHeight": 720,
+    "console_errors": []
+  },
+  "html_review": {
+    "readme_preview": "GitHub Markdown API rendering with local audited assets",
+    "readme_images_loaded": true,
+    "checklist_saved_progress": true,
+    "checklist_agent_choice_persisted": true,
+    "checklist_defaults_restored": true,
+    "narrow_layouts": {
+      "guide": {
+        "viewport": 390,
+        "clientWidth": 375,
+        "scrollWidth": 375
+      },
+      "player": {
+        "viewport": 390,
+        "clientWidth": 390,
+        "scrollWidth": 390
+      }
+    },
+    "viewport_restored": true
   }
 }

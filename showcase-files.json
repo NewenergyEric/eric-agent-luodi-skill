@@ -2,28 +2,28 @@
   "schema": 1,
   "files": {
     "assets/readme/hero-zh.mp4": {
-      "bytes": 1943674,
-      "sha256": "dd276678cca28e9b212ff12bacc669f4887db9c88a423db7a8360eceba9b1974"
+      "bytes": 1904220,
+      "sha256": "ed9075f6a39bfd88a2af6513f4745678d2c48dcd5eed8dd192320594f3f236a0"
     },
     "assets/readme/hero-zh.gif": {
-      "bytes": 5754213,
-      "sha256": "4cdec69ab730531f08ddf4bccf5e2aaae096ab58c92e1beaf85909f92f88b283"
+      "bytes": 5876833,
+      "sha256": "36bd29264d566de8aeb60c57454584c3b71d23b26df763a87971e756b04d92a3"
     },
     "assets/readme/hero-zh.webp": {
-      "bytes": 2805800,
-      "sha256": "228034d6d7847d5e756ce161d8fa134a412a0ef1239d8a9e6f6581a074b3a0cd"
+      "bytes": 2792058,
+      "sha256": "978fc112a1573bc5c2ade88193ef29d80603e0f4b70d846f79daab7d2504f4e8"
     },
     "assets/readme/hero-zh.png": {
-      "bytes": 341108,
-      "sha256": "bb62474458a26512b5eed6613f965768c63c2ea467d48cd9e8ea450cd0b212ad"
+      "bytes": 340039,
+      "sha256": "593e07cc2a1a43fa15be4b6e23268cd152c86ec3fa7c35c43bcd361ef873eb17"
     },
     "assets/readme/case-board-zh.png": {
-      "bytes": 538405,
-      "sha256": "0dea5943f7bf6847cc3b7cc90fb00d03bc7c7b380a65c6e1fee0624cb11a777d"
+      "bytes": 548267,
+      "sha256": "a633d359b341c2d791dd15468010b32f4a27662b04ac78b57ceca3cad4d13b11"
     },
     "motion/public/fonts/setup-sans.woff2": {
-      "bytes": 104532,
-      "sha256": "3ae8319347cfbc72534337befa399e3799022846b445f18f4d9bfbfaada87f42"
+      "bytes": 74632,
+      "sha256": "7614f8063f41afcce927e05058e32279d1334dd2466e8fc6b7987975dfbb2302"
     }
   }
 }

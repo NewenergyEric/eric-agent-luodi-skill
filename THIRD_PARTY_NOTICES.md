@@ -1,6 +1,6 @@
 # 来源与许可状态
 
-client-setup 的项目许可证尚待作者选择。下面只记录第三方材料自身的来源与许可，不替本项目选择授权条款。
+落地 · luodi 的项目许可证尚待作者选择。下面只记录第三方材料自身的来源与许可，不替本项目选择授权条款。
 
 ## 运行器与设计参考
 
@@ -13,7 +13,7 @@ client-setup 的项目许可证尚待作者选择。下面只记录第三方材�
 ## 展示制作
 
 - `motion/` 模板和部分逐帧结构改编自作者已安装的 skill-launch-studio。原模板声明 MIT；原声明完整保留于 `motion/UPSTREAM-LICENSE.txt`。其原始媒体打包、验收脚本在本次制作中执行，副本仅作为制作工具分发于 `motion/tools/`。
-- Noto Sans SC 字体子集用于本次视频文字。保留 SIL OFL 1.1 原文于 `motion/public/fonts/OFL.txt`。字体源名称和版权信息保留。
+- Noto Sans SC 字体子集用于本次视频文字。保留 SIL OFL 1.1 原文于 `motion/public/fonts/OFL.txt`。保留原始版权信息；本次新增「落」字，子集内部名称为 Luodi Field，来源仍为同一 Noto Sans SC 字体。
 - 可编辑视频工程固定 Remotion 4.0.534 和 React 19.2.0 等版本，详见 `motion/package-lock.json`。不分发 node_modules；使用者安装或运行媒体制作依赖前需遵守各自许可，Remotion 的适用条款见 [官方许可说明](https://www.remotion.dev/docs/license)。
 - FFmpeg/FFprobe 仅用于本机生成和检查媒体，不分发二进制。
 - 视频内容、三条合成订单、客户代号和结果展示均为本项目原创合成示例，不包含真实客户素材。

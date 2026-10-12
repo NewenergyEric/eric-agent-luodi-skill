@@ -1,3 +1,11 @@
+# 落地 · luodi 更名记录 · 2026-10-12
+
+用户已选定蓝色 FDE 产品名「落地 · luodi」，项目 Skill `$luodi`。本轮沿用 github-product-launch 与 skill-launch-studio 的更名、媒体复核和私有发布流程，只更新品牌及受影响入口，保留蓝色视觉和现有运行范围。价值说明、七步清单、行为模板和隔离验证继续交付；真实 Agent 安装与加载仍未接入。
+
+以下为此前过程记录，旧名称按历史理解。
+
+---
+
 # FDE 上市与产品化底稿
 
 采用作者 skill-launch-studio 的 copy-and-page、visual-direction、motion-and-media 及 launch-workbook 方法，结合 skill-productization 的能力/证据契约。

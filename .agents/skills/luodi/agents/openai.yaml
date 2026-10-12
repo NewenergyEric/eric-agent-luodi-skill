@@ -1,0 +1,4 @@
+interface:
+  display_name: "落地 · luodi"
+  short_description: "Configure, check, and update isolated customer examples"
+  default_prompt: "Use $luodi to configure or check this customer sandbox."

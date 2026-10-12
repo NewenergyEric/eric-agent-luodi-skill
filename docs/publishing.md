@@ -30,7 +30,7 @@ customers、machines、sandboxes、.control、.demo-runs、.test-runs、validati
 
 有历史时 release.py 将 git_history_review_required 列为人工审查项；不因此自动删历史或重写提交。首次公开前对提交树的文件清单、blob 哈希和消息单独审核，记录确切提交。
 
-license_status 与 upstream_review 表示当前授权/来源核对状态；未选项目 LICENSE 时 publication_ready=false。作者选择后才更新状态。本轮用户已授权目标账号下 client-setup 的建库和发布，许可证不从参考仓库自动继承。
+license_status 与 upstream_review 表示当前授权/来源核对状态；未选项目 LICENSE 时 publication_ready=false。作者选择后才更新状态。本轮用户已授权目标账号下 luodi（原 client-setup）的私有仓库更名与更新，许可证不从参考仓库自动继承。
 
 更多来源与各自许可见 [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md)。
 

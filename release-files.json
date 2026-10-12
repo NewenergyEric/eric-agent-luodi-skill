@@ -3,8 +3,8 @@
   "license_status": "not_selected",
   "upstream_review": "completed",
   "files": [
-    ".agents/skills/client-setup/SKILL.md",
-    ".agents/skills/client-setup/agents/openai.yaml",
+    ".agents/skills/luodi/SKILL.md",
+    ".agents/skills/luodi/agents/openai.yaml",
     ".gitattributes",
     ".github/workflows/validate.yml",
     ".gitignore",
@@ -37,6 +37,7 @@
     "docs/system-guide-evidence.json",
     "docs/tests.json",
     "docs/validation.md",
+    "docs/watch.html",
     "docs/workflow.md",
     "examples/behavior/AGENTS.template.md",
     "examples/computer-local.json",

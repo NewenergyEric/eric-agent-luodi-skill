@@ -1,7 +1,11 @@
 ---
-name: client-setup
+name: luodi
 description: 在本 Windows 项目内为新客户配置、检查或更新隔离的安全示例 Skill。适用于 FDE 快速配置演示、差异确认、故障恢复和交付接续；尚不支持客户机器或 OpenClaw/Hermes 部署。
 ---
+
+# 落地 · luodi
+
+面向 FDE 的客户配置、验收与持续维护。先把目标与证据对齐，再在当前支持范围内执行。
 
 先确认目标是 Windows 还是 Mac、当前执行器是否就在目标电脑；用户未提供时只问缺失项。本机无需 SSH，另一台电脑先核实并复用明确授权的连接，没有接入就停在引导。读项目根目录的 docs/computer-guide.md 与 docs/support-matrix.md；用三个原有入口的 `--brief examples/computer-local.json`（或 computer-mac.json / computer-other.json）生成只读分流。该计划不安装、不连接、不能用 --approve 执行。Mac 仅有引导分支，未在 Mac 实测；真实 Agent 部署依旧未接入。只有 Windows 本机示例需求才继续下面的可执行循环。
 
