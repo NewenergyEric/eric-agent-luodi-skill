@@ -1,49 +1,62 @@
 # Luodi · Agent Setup and Delivery
 
-**Windows / Mac: one Agent handoff workflow, with a checklist and evidence.**
+**Windows / Mac: bring the customer's AI workflow to life, one step at a time.**
 
-[中文](README.md) · [Interactive guide (Chinese)](docs/getting-started.html) · [Installation checklist](docs/installation-checklist.md) · [Isolated validation](docs/installation-verification.json)
+[中文](README.md) · [Interactive checklist](docs/getting-started.html) · [Written checklist](docs/installation-checklist.md) · [24-second introduction](docs/watch.html)
 
-Download the HTML and open it locally to use its checklist and copy controls. · Local validation build for FDEs
+Luodi is an Agent configuration and handoff Skill for FDEs. Start with the target computer and one useful task. Reuse working tools, review changes, and keep customer choices separate so the next update or conversation can continue the work.
 
-The intended workflow starts with a new Mac or Windows computer: select the Agent, check the environment and dependencies, review the deployment plan, configure the runtime and Skills, then validate one concrete customer task. Keep custom settings when adding or updating Skills, and leave a record that the next conversation can continue.
+Follow seven steps on either platform: dependencies, network access, Codex/IDE, a daily Agent, behavior rules, Skills, and task acceptance. OpenClaw is the default; choose Hermes or another Agent when it fits the customer.
 
-Both platforms follow the same seven steps: dependencies, network access, Codex/IDE, daily Agent, behavior rules, Skills, and acceptance. On Windows, identify the actual execution environment; on Mac, check macOS, Apple silicon or Intel, the terminal, and directory permissions. Reuse working tools and settings.
+![Windows/Mac delivery workflow](assets/readme/hero-zh.gif)
 
-Windows and Mac guidance is available. Verified execution still covers the Windows project-local example package and updates/recovery. Mac device execution, dependency installation, and real Agent installation and Skill loading remain unverified or unimplemented. See the [platform preparation and evidence scope](docs/computer-guide.md).
+[Local player](docs/watch.html) · [Chinese MP4](assets/readme/hero-zh.mp4?raw=true) · [WebP](assets/readme/hero-zh.webp?raw=true) · [Transcript](docs/demo.md)
 
-![Chinese Windows/Mac workflow preview](assets/readme/hero-zh.gif)
+The film uses authored meeting notes and an action list to illustrate the delivery workflow. Download the HTML checklist to choose options, save manual progress, copy the checklist, or print it.
 
-[Local player](docs/watch.html) · [Chinese MP4](assets/readme/hero-zh.mp4?raw=true) · [WebP](assets/readme/hero-zh.webp?raw=true) · [Transcript and evidence scope](docs/demo.md)
+## Start with the customer's task
 
-The film illustrates the intended workflow. Its meeting-notes-to-action-list example is an authored synthetic illustration, not a successful run through a deployed Agent. The previous English film is excluded from the current release; this revision renders Chinese only.
+Open the project in Codex and use [`$luodi`](.agents/skills/luodi/SKILL.md). Ask it to identify the system and execution location, inspect the existing environment, prepare a concrete plan, and define the first useful outcome.
 
-## Start with the customer task
-
-Open this project in Codex and use [.agents/skills/luodi/SKILL.md](.agents/skills/luodi/SKILL.md).
-
-> Prepare an Agent on this customer's new computer. First identify Mac or Windows and whether you are already on the target. Check the environment and dependencies. The first task is turning meeting notes into actions with owners and due dates. Show the plan and missing capabilities before changes, then verify installation, loading, and task outcome separately.
-
-If the executor is already on the target, use it locally without enabling SSH. For another computer, verify explicitly authorized existing access or report that access is missing. The current tool does not connect remotely. The separate Dahao project provides a Windows example of authorized access, reuse of an existing OpenClaw runtime, a small task, and access revocation; that result does not establish Mac execution in Luodi.
+On Windows, check the OS and actual execution environment. On Mac, check macOS, Apple silicon or Intel, the terminal, and directory permissions. Select tools and Skills for the task; review behavior rules before merging the chosen settings.
 
 ```powershell
-python -B client_setup.py configure --customer sample --brief examples/computer-local.json
+python -B client_setup.py configure --customer sample --brief examples/computer-mac.json
 ```
 
-Use `examples/computer-mac.json` for the Mac branch. `--brief` only emits guidance; it never installs, connects, or becomes an installation when approved. See the [support matrix](docs/support-matrix.md).
+Use `examples/computer-local.json` for Windows. `--brief` emits a read-only preparation plan; it does not install software or connect remotely. Consult the [support matrix](docs/support-matrix.md) for each execution entry's scope.
 
-## Run the implemented foundation
+## Connecting another computer
 
-On Windows with Python 3.12+, no extra Python dependencies are required:
+The SSH helper belongs to the separate [`dahao` Skill](https://github.com/NewenergyEric/dahao/tree/main/.agents/skills/dahao). Its Windows helper assists with identifying the target; Mac uses the system's Remote Login route. Follow [Dahao's connection checklist](https://github.com/NewenergyEric/dahao/blob/main/.agents/skills/dahao/references/connection-checklist.md) to confirm the host fingerprint, account, and target identity. If already on the target, use the local route.
+
+Install Dahao in the helper's Codex and ask it to prepare the other Mac, defaulting to OpenClaw: confirm the target, review access, reuse existing tools, then proceed within the specific authorization. Keep connection details in private session records.
+
+## Accept a concrete result
+
+Use the [meeting-note example](examples/first-task/meeting-notes.md) and [action list](examples/first-task/action-list.md) to define an observable result. Check installation, actual rule/Skill loading, and task output separately. Leave versions, configuration differences, and continuation steps for the next conversation.
+
+## Run the project-local example
+
+On Windows with Python 3.12+, using only the Python standard library:
 
 ```powershell
 python -B demo.py
 ```
 
-The isolated demo exercises pinned package installation, replay, update, preserved overrides, interruption recovery and receipts. Real Agent loading remains `not_verified`.
+The isolated example exercises package installation, replay, updates, preserved overrides, interruption recovery, and receipts. [Executable workflow](docs/workflow.md) · [Execution record](docs/installation-verification.json)
 
-Only three user entries remain: configure, check and update. Review the exact instance and file plan before approving its `plan_id`. Keep public defaults, customer overrides and machine differences separate; start the next conversation by checking the saved receipt.
+The user entries are configure, check, and update. Review the exact instance and file plan before approving its `plan_id`. Start continuation from the saved receipt and a check.
 
-[First-task illustration](examples/first-task/action-list.md) · [Current executable workflow](docs/workflow.md) · [Validation](docs/validation.md) · [Source/license status](THIRD_PARTY_NOTICES.md)
+## Continue development
 
-No real dependencies or Agent runtime have been installed by this revision. No system proxy, TUN, firewall, SSH, credentials or persistent access are configured. Private repository delivery is authorized; public open-source publication remains pending the author's license and copyright decision.
+Extend one platform, one Agent, and one concrete task at a time. Implementation scope, gaps, and reproducible test records are maintained in the [support matrix](docs/support-matrix.md) and [validation documentation](docs/validation.md).
+
+```powershell
+python -B -m unittest discover -s tests -v
+python -B tools/release.py check
+```
+
+[Rebuild the film](motion/README.md) · [Publication and privacy rules](docs/publishing.md) · [Sources and licensing](THIRD_PARTY_NOTICES.md)
+
+The blue FDE project is maintained independently. Publication and licensing follow the author's announcement and license files.

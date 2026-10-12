@@ -1,5 +1,5 @@
 {
-  "scope": "Windows/Mac preparation workflow; Windows example verified, Mac device execution pending",
+  "scope": "Illustrated Windows/Mac preparation and handoff workflow; execution evidence maintained in separate technical documents",
   "language_rendered": "zh",
   "duration_seconds": 24,
   "fps": 30,
@@ -11,7 +11,7 @@
       ],
       "title": "Windows / Mac，一套交付流程。",
       "claim": "target_workflow",
-      "visual": "Both platform choices are prominent; target and first task remain illustrative"
+      "visual": "Choose the platform, Agent and first customer task"
     },
     {
       "seconds": [
@@ -19,8 +19,8 @@
         7.6
       ],
       "title": "先选系统，再核对环境。",
-      "claim": "verified_local_read_only_routing",
-      "visual": "Windows execution environment and Mac chip/terminal/permissions shown side by side; Mac device pending"
+      "claim": "platform_preparation_checklist",
+      "visual": "Check Windows execution environment and Mac chip, terminal and permissions"
     },
     {
       "seconds": [
@@ -28,8 +28,8 @@
         12
       ],
       "title": "沿用已有效的，按需补齐缺口。",
-      "claim": "planned_installation",
-      "visual": "Reuse existing tools, choose matching platform dependencies, review changes; installation adapters still pending"
+      "claim": "reviewed_change_workflow",
+      "visual": "Reuse tools, select versions and review configuration changes"
     },
     {
       "seconds": [
@@ -38,7 +38,7 @@
       ],
       "title": "第一项工作，要有具体成果。",
       "claim": "authored_synthetic_illustration",
-      "visual": "Meeting notes to action list; no claimed Agent execution"
+      "visual": "Authored meeting notes to action list example"
     },
     {
       "seconds": [
@@ -46,8 +46,8 @@
         20.4
       ],
       "title": "安装到结果，分别验收。",
-      "claim": "verified_foundation_and_explicit_gaps",
-      "visual": "Windows package and Mac routing are distinct; Mac real-device execution and Agent loading remain pending"
+      "claim": "acceptance_checklist",
+      "visual": "Five handoff checks, expressed as actions rather than execution status"
     },
     {
       "seconds": [
@@ -55,8 +55,8 @@
         24
       ],
       "title": "技能继续加，客户定制留下。",
-      "claim": "verified_foundation_with_target_handoff",
-      "visual": "configure/check/update; separate overrides and continuation record"
+      "claim": "configuration_and_handoff_workflow",
+      "visual": "configure/check/update, independent overrides and a continuation record"
     }
   ],
   "brand": "落地 · luodi"

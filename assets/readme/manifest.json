@@ -8,20 +8,20 @@
   "errors": [],
   "assets": {
     "hero-zh.mp4": {
-      "bytes": 1915818,
-      "sha256": "a25a87d7ce9e1e4d9e3e29e3489723bc6711fb44bbfcaf5931ed79c2147ab0d8"
+      "bytes": 1859469,
+      "sha256": "9112427ffc4259e11ce1b235a5b01a12a413e15b10090cab9156829b43a541d3"
     },
     "hero-zh.webp": {
-      "bytes": 2828046,
-      "sha256": "4869100029ae9c0092761afec8e84591ed6d5382d10fb2b0d7e541f205166db0"
+      "bytes": 2810966,
+      "sha256": "170433ae6cbcfa02905915a240aa873b7f67c83de484ef031216b17f0b6103c5"
     },
     "hero-zh.gif": {
-      "bytes": 5940872,
-      "sha256": "f90d1b0807e5fee30f27af0c73d4ec4a4dcc3db157f7042bc1100a67e0c9883e"
+      "bytes": 5633864,
+      "sha256": "b238d2f89a3935330f81cf0587df1985e01488448523bec8115b3f4cf86d90ea"
     },
     "hero-zh.png": {
-      "bytes": 342920,
-      "sha256": "6e525332d13fa8386e40b3f4f47f8800d78950f9472e471b107627d1b60e89d9"
+      "bytes": 341083,
+      "sha256": "95930a53f21738ff9f36808edd80ddbad8e144cb3ab9af73b2a488d0d9411b8f"
     }
   },
   "observed": [
@@ -31,14 +31,14 @@
       "frames": 720,
       "duration_seconds": 24,
       "faststart": true,
-      "bytes": 1915818
+      "bytes": 1859469
     },
     {
       "file": "hero-zh.webp",
       "fps": 20,
       "frames": 480,
       "duration_seconds": 24.0,
-      "bytes": 2828046,
+      "bytes": 2810966,
       "budget": 3145728
     },
     {
@@ -46,7 +46,7 @@
       "fps": 20,
       "frames": 480,
       "duration_seconds": 24.0,
-      "bytes": 5940872,
+      "bytes": 5633864,
       "budget": 6291456
     }
   ],

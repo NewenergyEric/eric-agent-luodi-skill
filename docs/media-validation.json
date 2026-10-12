@@ -8,20 +8,20 @@
   "errors": [],
   "assets": {
     "hero-zh.mp4": {
-      "bytes": 1915818,
-      "sha256": "a25a87d7ce9e1e4d9e3e29e3489723bc6711fb44bbfcaf5931ed79c2147ab0d8"
+      "bytes": 1859469,
+      "sha256": "9112427ffc4259e11ce1b235a5b01a12a413e15b10090cab9156829b43a541d3"
     },
     "hero-zh.webp": {
-      "bytes": 2828046,
-      "sha256": "4869100029ae9c0092761afec8e84591ed6d5382d10fb2b0d7e541f205166db0"
+      "bytes": 2810966,
+      "sha256": "170433ae6cbcfa02905915a240aa873b7f67c83de484ef031216b17f0b6103c5"
     },
     "hero-zh.gif": {
-      "bytes": 5940872,
-      "sha256": "f90d1b0807e5fee30f27af0c73d4ec4a4dcc3db157f7042bc1100a67e0c9883e"
+      "bytes": 5633864,
+      "sha256": "b238d2f89a3935330f81cf0587df1985e01488448523bec8115b3f4cf86d90ea"
     },
     "hero-zh.png": {
-      "bytes": 342920,
-      "sha256": "6e525332d13fa8386e40b3f4f47f8800d78950f9472e471b107627d1b60e89d9"
+      "bytes": 341083,
+      "sha256": "95930a53f21738ff9f36808edd80ddbad8e144cb3ab9af73b2a488d0d9411b8f"
     }
   },
   "observed": [
@@ -31,14 +31,14 @@
       "frames": 720,
       "duration_seconds": 24,
       "faststart": true,
-      "bytes": 1915818
+      "bytes": 1859469
     },
     {
       "file": "hero-zh.webp",
       "fps": 20,
       "frames": 480,
       "duration_seconds": 24.0,
-      "bytes": 2828046,
+      "bytes": 2810966,
       "budget": 3145728
     },
     {
@@ -46,7 +46,7 @@
       "fps": 20,
       "frames": 480,
       "duration_seconds": 24.0,
-      "bytes": 5940872,
+      "bytes": 5633864,
       "budget": 6291456
     }
   ],
@@ -65,17 +65,18 @@
   },
   "font_check": {
     "status": "passed",
-    "glyphs_checked": 357,
+    "glyphs_checked": 363,
     "missing": 0,
     "source_sha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da",
-    "subset_sha256": "e2004fb7011452dbe4ea42633e1c9afba16e810b8571e1adb3182ab6c848467b",
-    "bytes": 83584
+    "subset_sha256": "217fd6b85e7fc49681722bfb7c1c5c95ee17d09bf90992ad58f0592ef4e08070",
+    "bytes": 84880
   },
   "visual_review": {
     "representative_frames": [
       80,
       180,
       310,
+      430,
       550,
       680
     ],
@@ -83,43 +84,35 @@
     "preserved_blue_style": true,
     "full_playback": "passed"
   },
-  "scope": "Windows/Mac preparation guidance; Windows local package verified, Mac real-device execution and real Agent installation/loading remain pending.",
+  "scope": "Illustrated Windows/Mac preparation and handoff workflow. Execution scope and evidence are kept in support-matrix.md and installation-verification.json; no new runtime capability is claimed.",
   "browser_playback": {
     "duration": 24,
     "currentTime": 24,
     "ended": true,
     "error": null,
-    "paused": true,
-    "videoWidth": 1280,
-    "videoHeight": 720,
-    "console_errors": []
+    "width": 1280,
+    "height": 720,
+    "method": "CUA video keyboard playback from start to end"
   },
-  "html_review": {
-    "readme_preview": "GitHub Markdown API with final local assets",
-    "readme_images_loaded": true,
-    "checklist": {
-      "status": "passed",
-      "mac_choice_persistence": true,
-      "progress_persistence": true,
-      "changing_location_resets_progress": true,
-      "mac_and_other_location_combined_note": true,
-      "narrow_layout": {
-        "viewport": 390,
-        "clientWidth": 375,
-        "scrollWidth": 375
-      },
-      "console_errors": [],
-      "restored": {
-        "system": "windows",
-        "location": "local",
-        "checked": 0
-      },
-      "viewport_restored": true
-    }
+  "presentation_review": {
+    "status": "passed",
+    "status_badges_removed": [
+      "README.md",
+      "README.en.md",
+      "docs/watch.html",
+      "docs/getting-started.html",
+      "docs/demo.md",
+      "assets/readme/hero-zh.srt",
+      "motion/src/LaunchFilm.tsx"
+    ],
+    "task_label": "authored example",
+    "technical_evidence_preserved": true
   },
-  "platform_scope": {
-    "Windows": "local_synthetic_package_verified",
-    "Mac": "guidance_only_real_device_pending",
-    "Dahao_reference": "Windows_existing_runtime_verification_only"
+  "checklist_browser_review": {
+    "Mac_other_target_selection": "passed",
+    "saved_progress_reload": "passed",
+    "changed_plan_clears_progress": "passed",
+    "default_options_restored": "passed",
+    "ssh_entry_visible": "passed"
   }
 }
