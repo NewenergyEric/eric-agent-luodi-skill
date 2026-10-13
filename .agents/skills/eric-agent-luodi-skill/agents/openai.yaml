@@ -1,0 +1,4 @@
+interface:
+  display_name: "落地 · eric-agent-luodi-skill"
+  short_description: "给 FDE 梳理客户目标、配置差异与验收清单，保留定制并留下交接"
+  default_prompt: "用 $eric-agent-luodi-skill 为客户规划 Agent 交付，先明确第一项任务、完成条件和需要客户参与的步骤。"

@@ -1,99 +1,114 @@
-# 落地 · luodi
+# 落地 · eric-agent-luodi-skill
 
-**Windows / Mac，把客户需要的 AI 一步步落地。**
+**给客户交付 Agent，把目标、配置、验收和交接一起做好。**
 
-[English](README.en.md) · 面向 FDE 的 Agent 配置与交付 Skill
+[English](README.en.md) · 面向 FDE、实施顾问和负责客户交付的工程师 · [Apache-2.0](LICENSE)
 
-[打开安装清单](docs/getting-started.html) · [文字 checklist](docs/installation-checklist.md) · [24 秒介绍](docs/watch.html)
+[开始使用](#三步开始) · [交付清单](docs/installation-checklist.md) · [24 秒介绍](docs/watch.html) · [能力范围](docs/support-matrix.md)
 
-从电脑准备到第一项工作，落地把交付拆成一张清单：先选系统与工具，复用已有环境，再规划 Agent、行为规则和 Skills。每一步写清要做什么、如何验收，客户的选择单独保留，下一次更新接着做。
-
-Windows 和 Mac 使用同一条路线：**依赖环境 → 网络通路 → Codex / IDE → 日常 Agent → 行为规则 → Skills → 任务与交接**。默认 OpenClaw，也可选择 Hermes 或客户指定的 Agent。
+客户说“帮团队用上 AI”，你要先弄清楚它要完成哪件事、在哪台电脑上运行、谁来验收。落地把这些判断串成一份交付清单：复用已有环境，保留客户定制，用具体成果验收，给下一位接手的人留下继续工作的入口。
 
 <picture>
   <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/hero-zh.png">
-  <img src="assets/readme/hero-zh.gif" width="100%" alt="落地的 Windows / Mac 交付流程：选择目标、检查环境、规划配置、完成第一项工作、分层验收并保留客户定制。">
+  <img src="assets/readme/hero-zh.gif" width="100%" alt="落地的蓝色交付流程示意：明确任务、选择 Windows 或 Mac、准备工具、核对规则与 Skills、验收和交接。">
 </picture>
 
-[本地播放器](docs/watch.html) · [中文 MP4](assets/readme/hero-zh.mp4?raw=true) · [GIF](assets/readme/hero-zh.gif?raw=true) · [轻量 WebP](assets/readme/hero-zh.webp?raw=true) · [影片文字稿](docs/demo.md)
+[中文 MP4](assets/readme/hero-zh.mp4?raw=true) · [GIF](assets/readme/hero-zh.gif) · [轻量 WebP](assets/readme/hero-zh.webp) · [文字稿](docs/demo.md)。短片保留「落地 · luodi」中文品牌，画面使用原创示例。
 
-短片用原创会议纪要示例讲解交付流程。下载 HTML 后用浏览器打开，即可选择方案、保存人工勾选进度、复制清单或打印。
+## 适合你现在的哪件事
 
-## 从客户的一句话开始
+| 你正在做 | 交给落地 | 拿到什么 |
+|---|---|---|
+| 第一次给客户准备 Agent | “先把这次交付计划列清楚” | 目标、系统与工具选择、逐步完成条件 |
+| 接手别人做了一半的项目 | “先检查做到哪里，从下一步继续” | 当前证据、缺口、下一项具体动作 |
+| 增加规则或 Skill | “看差异，保留客户原来的选择” | 变更范围、验收办法、恢复与接续记录 |
 
-在 Codex 中打开项目，使用 [`$luodi` Skill](.agents/skills/luodi/SKILL.md)：
+如果是帮爱人、朋友准备个人电脑，可以从更口语化的[搭好](https://github.com/NewenergyEric/eric-dahao-agent-skill)开始。
 
-> $luodi 帮我为客户准备一台 Mac，默认 OpenClaw。先确认执行位置和已有工具，按清单检查依赖、网络、行为规则与 Skills。第一项工作是把会议纪要整理成带负责人和期限的行动清单。先给出具体计划与影响，再按授权推进，留下交接记录。
+## 三步开始
 
-| 先决定 | 怎样准备 |
-|---|---|
-| Windows / Mac | Windows 核对系统与实际运行方式；Mac 核对 macOS、Apple 芯片或 Intel、终端与目录权限 |
-| 本机 / 另一台 | 已在目标电脑就直接检查；跨电脑先确认目标与接入方式 |
-| 网络与准备工具 | 复用已有通路；Clash、Codex、IDE 按实际需要选择 |
-| 日常 Agent 与 Skills | 先选 Agent，再选第一件任务所需的少量 Skills |
-| 行为规则 | 审阅 AGENTS.md 等规则的差异，只合并客户选择的部分 |
+**1. 在你自己的 Codex 中安装 Skill。** 把这段话复制给它：
 
-`--brief` 生成只读准备计划，便于审阅与继续开发。它不执行系统安装或远程连接；各执行入口的范围见[支持矩阵](docs/support-matrix.md)。
-
-```powershell
-python -B client_setup.py configure --customer sample --brief examples/computer-mac.json
+```text
+帮我安装这个 Skill：
+https://github.com/NewenergyEric/eric-agent-luodi-skill/tree/main/.agents/skills/eric-agent-luodi-skill
+审阅来源后安装完整 Skill 目录；如果已有旧版，先核对差异，不覆盖我的工作记录。
 ```
 
-Windows 路线使用 `examples/computer-local.json`。[分系统准备说明](docs/computer-guide.md#系统准备与验收)
+**2. 告诉它这次交付要做成什么。** 不清楚的部分可以直接说“不确定”。
 
-## 要帮另一台电脑：SSH 小工具在搭好
+```text
+$eric-agent-luodi-skill 我要为一个客户准备 Mac，默认 OpenClaw。
+第一件任务：把会议纪要整理成带负责人和期限的行动清单。
+先给我交付计划、每一步的完成条件和需要客户参与的地方。
+保留现有环境与客户定制，先做规划。
+```
 
-搭好单独管理仓库访问权限。连接工具随独立的 [`dahao` Skill](https://github.com/NewenergyEric/dahao/tree/main/.agents/skills/dahao) 一起提供；本仓库的 `luodi` 负责交付清单与配置包流程。
+**3. 从当前一步往下走。** Agent 只补问影响当前步骤的信息；你核对计划，再按具体授权推进。以后直接说“检查上次进度”或“更新一个 Skill，保留原配置”。
 
-- **Windows：** 使用搭好的双击连接小助手，核对目标电脑并交接必要信息。
-- **Mac：** 使用系统“远程登录”，按[搭好的连接清单](https://github.com/NewenergyEric/dahao/blob/main/.agents/skills/dahao/references/connection-checklist.md#b-目标是-mac)核对账户、主机指纹与目标身份。
-- **已经在目标电脑：** 直接走本机路线，无需额外开启 SSH。
+只安装 Skill 就能开始整理目标、交付计划和验收清单；无需先下载 HTML。Windows / Mac 都有准备流程。当前仓库运行器执行 Windows 项目内的合成配置包；真实客户机器安装与连接的范围见[支持矩阵](docs/support-matrix.md)。
 
-在帮助者的 Codex 中安装搭好 Skill 后，可以说：
+<details>
+<summary>已有旧版，或使用其他 Agent</summary>
 
-> $dahao 帮我给同 Wi-Fi 下的另一台 Mac 准备 AI 助手，默认 OpenClaw。先带我确认目标和远程登录，核对主机指纹，再检查环境。先复用已有工具，按具体授权推进安装、配置、任务验收与交接。
+旧 Skill 名称是 `luodi`，新名称是 `eric-agent-luodi-skill`。先确认新版已安装且能被选中，再请 Agent 仅移除确认属于本项目的旧 Skill；客户目录、实例和回执不随更名迁移。若技能列表未刷新，在下一轮对话重新选择。
 
-这会进入搭好的连接工作流；目标地址、账户与接入资料只留在本次私有记录中。
+其他支持 Agent Skills 的工具可按其官方方式安装完整 Skill 目录。提供终端或文件能力的工具才能执行相应检查；普通聊天可用来整理清单。执行本仓库示例需要完整仓库和 Windows + Python 3.12+。
 
-## 用一件具体工作验收
+</details>
 
-以[会议纪要](examples/first-task/meeting-notes.md)整理成[行动清单](examples/first-task/action-list.md)为例，检查输出是否包含行动、负责人、期限，以及需要补充的信息。
+## 开始后会怎样
 
-- **安装：** 核对文件与版本。
-- **加载：** 检查运行器实际识别并使用规则与 Skill。
-- **业务：** 查看任务成果是否符合客户要求。
+下面是使用示例，展示交付过程中的分工：
 
-![交付检查：环境、运行器、规则、第一项任务与客户配置](assets/readme/case-board-zh.png)
+> **你：** 客户有一台 Mac，想把会议纪要整理成行动清单。
+>
+> **落地：** 交付目标是“每条行动都有负责人、期限，缺失信息单独列出”。先确定这次是在目标 Mac 上工作，还是由另一台电脑协助；然后核对已有工具，给出配置与验收计划。
+>
+> **你：** 先规划，别改客户的现有设置。
+>
+> **落地：** 先输出准备清单、规则差异和验收样例，保留客户需要确认的选择。后续执行按范围和证据逐项接续。
 
-## 先运行项目内示例
+## 一张清单，做到可以交接
 
-在 Windows + Python 3.12+ 中运行，无需额外 Python 依赖：
+- [ ] **定目标：** 写清第一件任务、输入、输出和验收人。
+- [ ] **备环境：** 按 Windows / Mac 与所选 Agent 检查依赖和网络，复用可用工具。
+- [ ] **选工具：** Codex / IDE 按需选择，日常 Agent 默认 OpenClaw，也可用 Hermes。
+- [ ] **配规则：** 合并 AGENTS.md 等工作规则，保留客户选择；个人记忆和秘密留在原处。
+- [ ] **加 Skills：** 先选第一件任务需要的少量技能，核对来源、版本、权限和加载。
+- [ ] **看成果：** 分别核对安装、实际加载和任务结果。
+- [ ] **留交接：** 记录版本、证据、未完成项、恢复办法和下次从哪里继续。
+
+[完整文字清单](docs/installation-checklist.md) · [可选 HTML 清单](docs/getting-started.html) · [行为规则示例](examples/behavior/AGENTS.template.md)
+
+## 用一件工作验收
+
+[会议纪要示例](examples/first-task/meeting-notes.md) → [行动清单示例](examples/first-task/action-list.md)：检查每条行动是否可执行，有没有负责人、期限，缺失信息是否被明确指出。成果确认后，再核对客户能否自己继续使用。
+
+![环境、运行器、工作规则、任务与客户定制的交付示意](assets/readme/case-board-zh.png)
+
+需要协助另一台电脑接入时，使用独立的[搭好连接工作流](https://github.com/NewenergyEric/eric-dahao-agent-skill/tree/main/.agents/skills/eric-dahao-agent-skill)。凭据由原生客户端处理，连接资料只放本次私有记录；落地保留自身执行边界。
+
+<details>
+<summary>开发者：运行示例、验证和继续扩展</summary>
+
+在 Windows + Python 3.12+ 的完整项目根目录运行，无需额外 Python 依赖：
 
 ```powershell
 python -B demo.py
 ```
 
-示例在独立目录演练配置包安装、重复执行、升级、覆盖保留和中断恢复，并生成分层回执。[示例流程](docs/workflow.md) · [执行记录](docs/installation-verification.json)
-
-## 配置、检查、更新
-
-| 需求 | 项目内示例入口 | 输出 |
-|---|---|---|
-| 配置 | `python client_setup.py configure --customer sample` | 绑定实例身份的文件差异计划 |
-| 检查 | `python client_setup.py check --customer sample` | 当前差异、操作记录与验收状态 |
-| 更新 | `python client_setup.py update --customer sample --version 1.1.0` | 保留客户覆盖的新版本差异 |
-
-审阅具体计划后，给原配置或更新命令加 `--approve` 与完整 `plan_id`。公共模板、客户覆盖和机器差异分开保存，只管理明确列出的文件。下一段对话从 `.control/latest` 回执和 `check` 开始。
-
-## 继续开发与贡献
-
-可从一个具体系统、一种 Agent 和一项任务继续扩展适配。执行范围、实现缺口与测试记录集中在[支持矩阵](docs/support-matrix.md)和[验证文档](docs/validation.md)，便于复现与接续。
+示例在新的独立目录演练配置包安装、重跑、升级、保留覆盖和中断恢复。入口仍为 `configure / check / update`，具体用法见[工作流](docs/workflow.md)。Mac / 另一台电脑的 `--brief` 生成只读计划。
 
 ```powershell
 python -B -m unittest discover -s tests -v
 python -B tools/release.py check
 ```
 
-[Skill 使用记录](docs/skill-usage.md) · [视频重建](motion/README.md) · [发布与隐私规则](docs/publishing.md) · [来源与许可](THIRD_PARTY_NOTICES.md)
+[执行范围](docs/support-matrix.md) · [示例安装记录](docs/installation-verification.json) · [独立 Skill 检查](docs/skill-install-verification.json) · [验证方法](docs/validation.md) · [视频重建](motion/README.md)
 
-蓝色 FDE 版本独立维护。原创内容使用 [Apache-2.0](LICENSE)，Copyright 2026 NewenergyEric and contributors；第三方材料保留各自许可。提交问题前请阅读[安全与隐私说明](docs/security.md)。
+</details>
+
+[Skill 与写法来源](docs/skill-usage.md) · [发布规则](docs/publishing.md) · [安全说明](docs/security.md) · [第三方许可](THIRD_PARTY_NOTICES.md)
+
+原创内容采用 [Apache-2.0](LICENSE)，Copyright 2026 NewenergyEric and contributors。蓝色「落地」与粉色「搭好」分别维护。

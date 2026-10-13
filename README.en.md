@@ -1,62 +1,81 @@
-# Luodi · Agent Setup and Delivery
+# Luodi · eric-agent-luodi-skill
 
-**Windows / Mac: bring the customer's AI workflow to life, one step at a time.**
+**Help FDEs turn a customer's Agent request into a delivery people can verify and take over.**
 
-[中文](README.md) · [Interactive checklist](docs/getting-started.html) · [Written checklist](docs/installation-checklist.md) · [24-second introduction](docs/watch.html)
+[中文](README.md) · For field engineers, implementation consultants and customer delivery teams · [Apache-2.0](LICENSE)
 
-Luodi is an Agent configuration and handoff Skill for FDEs. Start with the target computer and one useful task. Reuse working tools, review changes, and keep customer choices separate so the next update or conversation can continue the work.
+Start with the first job the customer needs done. Luodi helps define the output, choose the environment, preserve customer settings, plan acceptance and leave a clear handoff. Windows and Mac share a preparation checklist; the bundled executor runs synthetic examples inside a Windows project sandbox.
 
-Follow seven steps on either platform: dependencies, network access, Codex/IDE, a daily Agent, behavior rules, Skills, and task acceptance. OpenClaw is the default; choose Hermes or another Agent when it fits the customer.
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/hero-zh.png">
+  <img src="assets/readme/hero-zh.gif" width="100%" alt="Blue Luodi workflow illustration: define the task, choose the environment, prepare rules and Skills, verify the result and hand over.">
+</picture>
 
-![Windows/Mac delivery workflow](assets/readme/hero-zh.gif)
+[24-second introduction, Chinese](docs/watch.html) · [Checklist, Chinese](docs/installation-checklist.md) · [Execution scope](docs/support-matrix.md)
 
-[Local player](docs/watch.html) · [Chinese MP4](assets/readme/hero-zh.mp4?raw=true) · [WebP](assets/readme/hero-zh.webp?raw=true) · [Transcript](docs/demo.md)
+## Start in three steps
 
-The film uses authored meeting notes and an action list to illustrate the delivery workflow. Download the HTML checklist to choose options, save manual progress, copy the checklist, or print it.
+**1. Ask your Codex to install the Skill:**
 
-## Start with the customer's task
-
-Open the project in Codex and use [`$luodi`](.agents/skills/luodi/SKILL.md). Ask it to identify the system and execution location, inspect the existing environment, prepare a concrete plan, and define the first useful outcome.
-
-On Windows, check the OS and actual execution environment. On Mac, check macOS, Apple silicon or Intel, the terminal, and directory permissions. Select tools and Skills for the task; review behavior rules before merging the chosen settings.
-
-```powershell
-python -B client_setup.py configure --customer sample --brief examples/computer-mac.json
+```text
+Install this Skill after reviewing its source:
+https://github.com/NewenergyEric/eric-agent-luodi-skill/tree/main/.agents/skills/eric-agent-luodi-skill
+Install the complete Skill directory. If an older version exists, compare it first and preserve my work records.
 ```
 
-Use `examples/computer-local.json` for Windows. `--brief` emits a read-only preparation plan; it does not install software or connect remotely. Consult the [support matrix](docs/support-matrix.md) for each execution entry's scope.
+**2. Describe the first customer outcome:**
 
-## Connecting another computer
+```text
+$eric-agent-luodi-skill Plan an OpenClaw setup for a customer's Mac.
+The first task is turning meeting notes into actions with owners and deadlines.
+Give me the delivery steps, completion criteria and customer decisions.
+Start with planning and preserve the existing environment and settings.
+```
 
-Dahao manages repository access separately. The SSH helper belongs to the separate [`dahao` Skill](https://github.com/NewenergyEric/dahao/tree/main/.agents/skills/dahao). Its Windows helper assists with identifying the target; Mac uses the system's Remote Login route. Follow [Dahao's connection checklist](https://github.com/NewenergyEric/dahao/blob/main/.agents/skills/dahao/references/connection-checklist.md) to confirm the host fingerprint, account, and target identity. If already on the target, use the local route.
+**3. Continue from the current step.** Provide only missing information that affects the next action. Later, ask to check progress or update one Skill while preserving customer choices.
 
-Install Dahao in the helper's Codex and ask it to prepare the other Mac, defaulting to OpenClaw: confirm the target, review access, reuse existing tools, then proceed within the specific authorization. Keep connection details in private session records.
+The standalone Skill can produce a delivery plan and acceptance checklist without this full repository or a webpage. Running the bundled configuration example needs the complete repository and Windows + Python 3.12+. Actual customer installations and remote connections remain outside the executor's scope.
 
-## Accept a concrete result
+## Choose the request that fits
 
-Use the [meeting-note example](examples/first-task/meeting-notes.md) and [action list](examples/first-task/action-list.md) to define an observable result. Check installation, actual rule/Skill loading, and task output separately. Leave versions, configuration differences, and continuation steps for the next conversation.
+| Your situation | Ask for | Result |
+|---|---|---|
+| New customer | A delivery plan for one useful task | Scope, choices and completion criteria |
+| Taking over ongoing work | Check the current state first | Evidence, missing items and the next action |
+| Changing rules or Skills | Review the difference and preserve overrides | Change scope, acceptance and recovery steps |
 
-## Run the project-local example
+The route is dependencies → network → Codex/IDE as needed → daily Agent → work rules → Skills → task and handoff. OpenClaw is the default; Hermes or an existing Agent can be selected. Check installation, actual loading and task output separately.
 
-On Windows with Python 3.12+, using only the Python standard library:
+[Meeting-note input](examples/first-task/meeting-notes.md) → [Action-list example](examples/first-task/action-list.md). Check owners, deadlines and clearly identified missing information, then make sure the customer can continue independently.
+
+For helping family or friends with a personal computer, use [Dahao](https://github.com/NewenergyEric/eric-dahao-agent-skill), including its separate connection workflow.
+
+<details>
+<summary>Existing installations and other Agents</summary>
+
+The old identifier was `luodi`. Install `eric-agent-luodi-skill`, confirm it is discoverable, then remove only the confirmed old Skill directory if needed. Customer instances and receipts keep their existing paths. Select the Skill again in the next conversation turn if the list needs refreshing.
+
+Other Agent Skills-compatible tools can install the complete folder through their documented mechanism. Terminal/file access is needed for execution; a chat-only tool can help work through the checklist.
+
+</details>
+
+<details>
+<summary>Developer example and checks</summary>
+
+From the complete project on Windows + Python 3.12+, with no additional Python dependencies:
 
 ```powershell
 python -B demo.py
-```
-
-The isolated example exercises package installation, replay, updates, preserved overrides, interruption recovery, and receipts. [Executable workflow](docs/workflow.md) · [Execution record](docs/installation-verification.json)
-
-The user entries are configure, check, and update. Review the exact instance and file plan before approving its `plan_id`. Start continuation from the saved receipt and a check.
-
-## Continue development
-
-Extend one platform, one Agent, and one concrete task at a time. Implementation scope, gaps, and reproducible test records are maintained in the [support matrix](docs/support-matrix.md) and [validation documentation](docs/validation.md).
-
-```powershell
 python -B -m unittest discover -s tests -v
 python -B tools/release.py check
 ```
 
-[Rebuild the film](motion/README.md) · [Publication and privacy rules](docs/publishing.md) · [Sources and licensing](THIRD_PARTY_NOTICES.md)
+The example exercises installation, repeat execution, upgrades, override preservation and interrupted-write recovery. User commands remain `configure / check / update`; `--brief` is read-only guidance.
 
-The blue FDE project is maintained independently. Original code, documentation and synthetic assets are licensed under [Apache-2.0](LICENSE). Copyright 2026 NewenergyEric and contributors. Third-party materials retain their own licenses. Read the [security and privacy guidance](docs/security.md) before submitting an issue.
+[Workflow](docs/workflow.md) · [Installation evidence](docs/installation-verification.json) · [Standalone Skill checks](docs/skill-install-verification.json) · [Validation](docs/validation.md) · [Media source](motion/README.md)
+
+</details>
+
+[Optional HTML checklist](docs/getting-started.html) · [Editorial references](docs/skill-usage.md) · [Security](docs/security.md) · [Third-party notices](THIRD_PARTY_NOTICES.md)
+
+Original content: [Apache-2.0](LICENSE), Copyright 2026 NewenergyEric and contributors. The blue Luodi brand and existing media remain in place.

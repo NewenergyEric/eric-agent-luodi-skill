@@ -1,3 +1,21 @@
+# Skill 命名与上手引导 · 2026-10-13
+
+当前 Skill 与仓库名称：`eric-agent-luodi-skill`。中文品牌、蓝粉风格与既有媒体保留；运行器、实例标识和私人状态路径不迁移。README 中英文、Skill 入口、HTML 清单、跨项目链接与发布白名单同步更新。
+
+这次把入口分成“适合谁 → 安装一句话 → 第一项任务 → 当前一步 → 验收与继续”。落地面向 FDE 的目标、差异、证据与交接；搭好面向帮助者与亲友的分工，一次只给必要动作。技术范围与验证记录单独展开，保留实际限制。
+
+文案组织参考：
+
+- [Enterprise AI Playbook](https://github.com/NewenergyEric/enterprise-ai-playbook)：按用户工作选择入口，并明确交付产物。
+- [带娃.skill](https://github.com/NewenergyEric/daiwa.skill)：从具体现场问题进入，给出能直接使用的话与下一步。
+- [花叔](https://github.com/alchaincyf)与[女娲 Skill](https://github.com/alchaincyf/nuwa-skill)：明确用途、可复制安装指令、上手示例和逐层展开的技术说明。
+
+这里只借鉴信息组织方式，文案重新按本项目实际能力撰写，没有复制这些项目的代码、素材或授权条款，也不表示合作或背书。Skill 结构按 skill-creator 校准；安装检查使用独立目录，不修改个人 Skill 库。
+
+以下为历史记录。
+
+---
+
 # 对外介绍改为流程与价值 · 2026-10-12
 
 按作者要求，README、清单首页与短片使用步骤、选择项和交付价值，不展示“待接入 / 已验证”式工程状态。任务画面标为原创示例；实际能力、缺口与测试证据仍在支持矩阵和验证文档中。沿用 github-product-launch 与 skill-launch-studio 的媒体流程，保留蓝色、字体与连续动效。另补独立 dahao Skill 的 SSH 工具及 Mac 接入位置；没有复制其工具或扩大 luodi 执行器权限。
@@ -16,7 +34,7 @@
 
 # 落地 · luodi 更名记录 · 2026-10-12
 
-用户已选定蓝色 FDE 产品名「落地 · luodi」，项目 Skill `$luodi`。本轮沿用 github-product-launch 与 skill-launch-studio 的更名、媒体复核和私有发布流程，只更新品牌及受影响入口，保留蓝色视觉和现有运行范围。价值说明、七步清单、行为模板和隔离验证继续交付；真实 Agent 安装与加载仍未接入。
+用户已选定蓝色 FDE 产品名「落地 · luodi」，项目 Skill `$eric-agent-luodi-skill`。本轮沿用 github-product-launch 与 skill-launch-studio 的更名、媒体复核和私有发布流程，只更新品牌及受影响入口，保留蓝色视觉和现有运行范围。价值说明、七步清单、行为模板和隔离验证继续交付；真实 Agent 安装与加载仍未接入。
 
 以下为此前过程记录，旧名称按历史理解。
 

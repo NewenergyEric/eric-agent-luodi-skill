@@ -3,8 +3,11 @@
   "license_status": "selected",
   "upstream_review": "completed",
   "files": [
-    ".agents/skills/luodi/SKILL.md",
-    ".agents/skills/luodi/agents/openai.yaml",
+    ".agents/skills/eric-agent-luodi-skill/LICENSE",
+    ".agents/skills/eric-agent-luodi-skill/SKILL.md",
+    ".agents/skills/eric-agent-luodi-skill/agents/openai.yaml",
+    ".agents/skills/eric-agent-luodi-skill/references/installation-checklist.md",
+    ".agents/skills/eric-agent-luodi-skill/references/project-example.md",
     ".gitattributes",
     ".github/workflows/validate.yml",
     ".gitignore",
@@ -34,6 +37,7 @@
     "docs/media-validation.json",
     "docs/publishing.md",
     "docs/security.md",
+    "docs/skill-install-verification.json",
     "docs/skill-usage.md",
     "docs/support-matrix.md",
     "docs/system-guide-evidence.json",
@@ -84,6 +88,7 @@
     "tests/test_computer_guide.py",
     "tests/test_media_release.py",
     "tests/test_release.py",
+    "tests/test_skill_install.py",
     "tools/computer_guide.py",
     "tools/release.py"
   ]
