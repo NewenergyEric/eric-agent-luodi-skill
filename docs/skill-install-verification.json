@@ -3,16 +3,17 @@
   "date": "2026-10-13",
   "skill": "eric-agent-luodi-skill",
   "scope": "standalone_skill_structure_relocation_and_project_regression",
-  "skill_files": 5,
-  "structure_validator": "passed",
+  "skill_files": 6,
+  "structure_validator": "metadata_and_license_checks_passed",
   "relative_reference_closure": "passed",
-  "relative_links_checked": 4,
+  "relative_links_checked": 8,
   "source_sha256": {
     "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
-    "SKILL.md": "e5263d8c3fdaaf515ea7b34e1b0f530554bdfbce073405cb84802f5d4405b285",
+    "SKILL.md": "cc12829e145d311280c39753fdc4600f3ac3bda6ec336059d086513ca0f2b33f",
     "agents/openai.yaml": "f95b7131a1ed191dd66ec53e53fd57179da04d4aaee1df51ffd73c6191ad3f62",
-    "references/installation-checklist.md": "aaae41222de8a55f059d830f334c61649c39faec3132a2ececa5ec2f33c11b52",
-    "references/project-example.md": "13c384f64dbbc89578325cb6f04beb08a8a0812747ac1b88cecce2e02a0d1cfe"
+    "references/installation-checklist.md": "14fddaf3fc0981c3770470b2152cb3f1d45b7ef846e046f113eb5c262680eb5d",
+    "references/project-example.md": "13c384f64dbbc89578325cb6f04beb08a8a0812747ac1b88cecce2e02a0d1cfe",
+    "references/verification-checklist.md": "18bc86aa347a8d0323372cef13ea9c034e750d09046f3b07ce8908703ab5d05b"
   },
   "runtime_or_target_installation_claimed": false,
   "project_regression": {
@@ -21,7 +22,8 @@
     "status": "passed"
   },
   "standalone_relocation": "passed",
+  "isolated_project_demo": "passed",
   "license_included": "Apache-2.0",
-  "notes": "Standalone planning references work outside the full repository. Sandbox execution requires the complete Windows project.",
-  "revision_scope": "FDE method and task-tool navigation added to the standalone Skill; executor scope unchanged."
+  "revision_scope": "Windows/Mac field acceptance checklist added; executor scope unchanged.",
+  "notes": "Relocated planning references work without a repository or webpage. The bundled executor still requires the complete Windows project."
 }

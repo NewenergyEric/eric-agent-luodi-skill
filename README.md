@@ -75,7 +75,9 @@ $eric-agent-luodi-skill 我要为一个客户准备 Mac，默认 OpenClaw。
 - [ ] **配规则：** 合并 AGENTS.md 等工作规则，保留客户选择；个人记忆和秘密留在原处。
 - [ ] **加 Skills：** 先选第一件任务需要的少量技能，核对来源、版本、权限和加载。
 - [ ] **看成果：** 分别核对安装、实际加载和任务结果。
-- [ ] **留交接：** 记录版本、证据、未完成项、恢复办法和下次从哪里继续。
+- [ ] **留交接：** 交付真实安装位置与打开方式，由客户本人试用；记录版本、证据、未完成项、恢复办法和下次从哪里继续。
+
+[Windows / Mac 实测经验与验收清单](docs/field-verification.md)已补齐：目标核验、可见启动入口、逐层验证、网络中断接续和临时权限收回。真实案例作为交付参考，配套运行器仍限 Windows 项目内合成示例。
 
 [完整文字清单](docs/installation-checklist.md) · [可选 HTML 清单](docs/getting-started.html) · [行为规则示例](examples/behavior/AGENTS.template.md)
 

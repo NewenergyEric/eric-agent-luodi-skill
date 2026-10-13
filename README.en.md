@@ -44,7 +44,7 @@ The standalone Skill can produce a delivery plan and acceptance checklist withou
 | Taking over ongoing work | Check the current state first | Evidence, missing items and the next action |
 | Changing rules or Skills | Review the difference and preserve overrides | Change scope, acceptance and recovery steps |
 
-The route is dependencies → network → Codex/IDE as needed → daily Agent → work rules → Skills → task and handoff. OpenClaw is the default; Hermes or an existing Agent can be selected. Check installation, actual loading and task output separately.
+The route is dependencies → network → Codex/IDE as needed → daily Agent → work rules → Skills → task and handoff. OpenClaw is the default; Hermes or an existing Agent can be selected. Check installation, actual loading and task output separately. Give the customer the real executable location and a usable launch entry, then have them open it and try their task. [Windows/Mac field experience and acceptance](docs/field-verification.md) now cover identity checks, interrupted-download recovery and temporary-access cleanup. These planning references preserve the Windows synthetic-example executor scope.
 
 [Meeting-note input](examples/first-task/meeting-notes.md) → [Action-list example](examples/first-task/action-list.md). Check owners, deadlines and clearly identified missing information, then make sure the customer can continue independently.
 
