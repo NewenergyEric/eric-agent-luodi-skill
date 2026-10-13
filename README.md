@@ -4,7 +4,7 @@
 
 [English](README.en.md) · 面向 FDE、实施顾问和负责客户交付的工程师 · [Apache-2.0](LICENSE)
 
-[开始使用](#三步开始) · [交付清单](docs/installation-checklist.md) · [24 秒介绍](docs/watch.html) · [能力范围](docs/support-matrix.md)
+[开始使用](#三步开始) · [交付清单](docs/installation-checklist.md) · [24 秒介绍](docs/watch.html) · [FDE 与工具](#把-agent-部署接到业务工作里) · [能力范围](docs/support-matrix.md)
 
 客户说“帮团队用上 AI”，你要先弄清楚它要完成哪件事、在哪台电脑上运行、谁来验收。落地把这些判断串成一份交付清单：复用已有环境，保留客户定制，用具体成果验收，给下一位接手的人留下继续工作的入口。
 
@@ -84,6 +84,18 @@ $eric-agent-luodi-skill 我要为一个客户准备 Mac，默认 OpenClaw。
 [会议纪要示例](examples/first-task/meeting-notes.md) → [行动清单示例](examples/first-task/action-list.md)：检查每条行动是否可执行，有没有负责人、期限，缺失信息是否被明确指出。成果确认后，再核对客户能否自己继续使用。
 
 ![环境、运行器、工作规则、任务与客户定制的交付示意](assets/readme/case-board-zh.png)
+
+## 把 Agent 部署接到业务工作里
+
+**选准业务问题 → 准备 Agent → 配上任务工具 → 验收交接。** 落地把电脑、工作规则与 Skills 的准备，接到一项具体业务任务上。
+
+| 你现在需要什么 | 从哪里继续 | 带回交付清单的内容 |
+|---|---|---|
+| 找到值得做的场景，理清交付方法 | [FDE 指南](https://fde.aielsen.com/zh/) · [公开仓库](https://github.com/NewenergyEric/enterprise-ai-playbook) | 业务目标、工作步骤、验收标准 |
+| 把目标变成 Agent 准备与交接计划 | [用落地开始](#三步开始) | 环境、行为规则、Skills 选择、配置差异与验收记录 |
+| 为具体任务选择工具与 Skills | [FDE Tool](https://fde.aielsen.com/zh/toolkit/)（非公开，需访问权限） | 按授权选用的工具、所需输入、预期产物 |
+
+例如客户要做市场研究：先用 FDE 梳理研究问题与判断标准；在落地里准备 Agent 和工作规则；按需从 FDE Tool 选择有权使用的技能，再把来源、版本与一份研究成果的验收条件加入清单。
 
 <details>
 <summary>开发者：运行示例、验证和继续扩展</summary>

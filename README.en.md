@@ -11,7 +11,7 @@ Start with the first job the customer needs done. Luodi helps define the output,
   <img src="assets/readme/hero-zh.gif" width="100%" alt="Blue Luodi workflow illustration: define the task, choose the environment, prepare rules and Skills, verify the result and hand over.">
 </picture>
 
-[24-second introduction, Chinese](docs/watch.html) · [Checklist, Chinese](docs/installation-checklist.md) · [Execution scope](docs/support-matrix.md)
+[24-second introduction, Chinese](docs/watch.html) · [Checklist, Chinese](docs/installation-checklist.md) · [Execution scope](docs/support-matrix.md) · [FDE & tools](#connect-deployment-to-business-work)
 
 ## Start in three steps
 
@@ -47,6 +47,18 @@ The standalone Skill can produce a delivery plan and acceptance checklist withou
 The route is dependencies → network → Codex/IDE as needed → daily Agent → work rules → Skills → task and handoff. OpenClaw is the default; Hermes or an existing Agent can be selected. Check installation, actual loading and task output separately.
 
 [Meeting-note input](examples/first-task/meeting-notes.md) → [Action-list example](examples/first-task/action-list.md). Check owners, deadlines and clearly identified missing information, then make sure the customer can continue independently.
+
+## Connect deployment to business work
+
+**Choose a business problem → prepare the Agent → select task tools → verify and hand over.** Luodi connects the computer, work rules and Skills to a concrete customer task.
+
+| What you need | Where to continue | Bring back to the delivery checklist |
+|---|---|---|
+| Choose a use case and understand the delivery method | [FDE guide](https://fde.aielsen.com/en/) · [Public repository](https://github.com/NewenergyEric/enterprise-ai-playbook) | Business outcome, workflow and acceptance criteria |
+| Turn that outcome into an Agent preparation and handoff plan | [Start with Luodi](#start-in-three-steps) | Environment, work rules, Skill choices, configuration changes and evidence |
+| Select tools and Skills for the task | [FDE Tool](https://fde.aielsen.com/zh/toolkit/) (non-public; access required) | Authorized tools, required inputs and expected outputs |
+
+For a market-research task, use FDE to frame the research question and decision criteria. Prepare the Agent and work rules with Luodi, choose an authorized Skill from FDE Tool if needed, then add its source, version and output acceptance criteria to the checklist.
 
 <details>
 <summary>Existing installations and other Agents</summary>

@@ -14,6 +14,12 @@
 
 Skill 随包提供独立交付清单；执行仓库内合成示例时才需要完整项目。下方列的是整条准备路线，按当前执行范围逐项推进。
 
+## 接到业务任务上
+
+- 用 [FDE 指南](https://fde.aielsen.com/zh/)梳理业务问题、工作步骤与验收标准；[公开仓库](https://github.com/NewenergyEric/enterprise-ai-playbook)可供查阅。
+- 按需到 [FDE Tool](https://fde.aielsen.com/zh/toolkit/) 选择任务工具与 Skills（非公开，需访问权限）。
+- 将选定工具的来源、版本、依赖与预期成果带回下方清单，再按当前步骤准备、验收和交接。
+
 ## 先选择
 
 - 电脑：Windows / Mac；就在这台 / 另一台。Windows 确认实际运行方式；Mac 确认 macOS、Apple 芯片或 Intel、终端与目录权限。
@@ -24,7 +30,7 @@ Skill 随包提供独立交付清单；执行仓库内合成示例时才需要�
 
 选择改变后重新核对完成项。另一台电脑先由当地执行器检查，不自动建立连接。只准备实际需要的依赖，不把所有选项一起安装。
 
-Windows / Mac 使用同一张清单，按系统核对细节。[分系统准备](computer-guide.md#系统准备与验收) · [SSH 小工具与 Mac 入口](computer-guide.md#ssh-与-mac-尝试入口)。
+Windows / Mac 使用同一张清单，按系统核对细节。[分系统准备](computer-guide.md#系统准备与验收) · [远程接入与 Mac 准备](computer-guide.md#ssh-与-mac-尝试入口)。
 
 ## 1. 依赖环境
 

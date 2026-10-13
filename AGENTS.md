@@ -16,4 +16,4 @@ demo.py 只在独立 .demo-runs 中创建合成实例。状态在 .control/lates
 
 Skill 与 GitHub 仓库标识为 `eric-agent-luodi-skill`，中文品牌与既有媒体名称保持不变。使用引导先说明适合谁、安装入口与第一句话，再展开技术细节；按配置 / 检查 / 更新接续，保留真实能力与授权边界。
 
-对外介绍、README、Skill 引导和公开制作记录只描述本产品，不做跨产品推荐、对照或维护关系说明。许可与版权信息集中在 LICENSE 和 THIRD_PARTY_NOTICES.md，产品正文不追加授权宣言。
+对外介绍以本产品的用户与交付路径为主线。按作者要求，可链接 FDE 指南/公开仓库与 FDE Tool，说明业务方法、Agent 准备和任务工具怎样衔接；FDE Tool 仅保留作者确认的非公开入口并标注访问权限，不公开私有仓库地址或内容。不加入无关产品推荐、对照或维护关系说明。许可与版权信息集中在 LICENSE 和 THIRD_PARTY_NOTICES.md，产品正文不追加授权宣言。
