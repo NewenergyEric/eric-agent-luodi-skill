@@ -6,10 +6,10 @@
   "skill_files": 5,
   "structure_validator": "passed",
   "relative_reference_closure": "passed",
-  "relative_links_checked": 5,
+  "relative_links_checked": 4,
   "source_sha256": {
     "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
-    "SKILL.md": "d4a8b54f6c54ce91d118194ed31ae186bde775de8238974c1ce66cefacf15a7d",
+    "SKILL.md": "3108f3baae490bb46d8fbc31458fd5a26d6f370644c931cdbda4c1062f3ef709",
     "agents/openai.yaml": "f95b7131a1ed191dd66ec53e53fd57179da04d4aaee1df51ffd73c6191ad3f62",
     "references/installation-checklist.md": "aaae41222de8a55f059d830f334c61649c39faec3132a2ececa5ec2f33c11b52",
     "references/project-example.md": "13c384f64dbbc89578325cb6f04beb08a8a0812747ac1b88cecce2e02a0d1cfe"
@@ -22,5 +22,6 @@
   },
   "standalone_relocation": "passed",
   "license_included": "Apache-2.0",
-  "notes": "Standalone planning references work outside the full repository. Sandbox execution requires the complete Windows project."
+  "notes": "Standalone planning references work outside the full repository. Sandbox execution requires the complete Windows project.",
+  "revision_scope": "Self-contained product copy; no cross-product references or promotional license footer."
 }

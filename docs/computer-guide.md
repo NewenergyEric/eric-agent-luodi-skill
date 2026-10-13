@@ -24,22 +24,22 @@
 
 ## SSH 与 Mac 尝试入口
 
-SSH 连接工具在独立的 [dahao Skill](https://github.com/NewenergyEric/eric-dahao-agent-skill/tree/main/.agents/skills/eric-dahao-agent-skill) 中，随 Skill 安装提供。本仓库不捆绑该工具，也不通过 `--brief` 建立远程连接。
+先在交付计划中写清执行位置、目标操作者、接入方式与权限范围。本项目提供准备清单和只读分流；远程接入应在具体实施计划中单独安排，`--brief` 不建立 SSH 连接。
 
-| 场景 | 入口 |
+| 场景 | 先准备什么 |
 |---|---|
-| 另一台 Windows | 搭好的双击连接小助手：`assets/windows-connect/` 源码与 `scripts/build_windows_connect.py` 构建脚本 |
-| 另一台 Mac | 系统“远程登录”，按搭好的 [Windows / Mac 连接清单](https://github.com/NewenergyEric/eric-dahao-agent-skill/blob/main/.agents/skills/eric-dahao-agent-skill/references/connection-checklist.md#b-目标是-mac)推进 |
-| 控制端发现目标 | 搭好的 `scripts/discover_target.py`：读取已有候选；确认后仅检查选定目标的 SSH 标识 |
-| 已在目标本机 | 使用本机 Agent，直接核对系统、账户与工作目录 |
+| 已在目标本机 | 核对系统、账户、工作目录与已有工具，直接整理本机准备计划 |
+| 另一台 Windows | 确认目标操作者和已有管理通道，列清接入所需的授权与恢复办法 |
+| 另一台 Mac | 确认 macOS、芯片与终端条件；需要远程登录时，由目标操作者核对具体权限 |
+| 接入前核验 | 确认目标身份、主机公钥指纹、账户和工作目录；秘密由原生客户端处理 |
 
-Mac 尝试时先安装搭好 Skill，在对话中说明“另一台 Mac，默认 OpenClaw”。确认目标和具体权限后，依次核对远程登录、主机公钥指纹、账户与系统身份，再推进依赖、工具、规则、Skills 和首项任务。Windows 双击程序不用于 Mac。密码与私钥留在用户设备，地址和账户只进入私有接续记录。
+Mac 交付先规划依赖、工具、行为规则、Skills 和首项任务，再逐项收集实际执行证据。密码与私钥留在用户设备，目标地址和账户只进入本次私有接续记录。
 
-## 借鉴搭好的范围
+## 交付证据的范围
 
-独立项目「搭好」的[脱敏 Windows 实测记录](https://github.com/NewenergyEric/eric-dahao-agent-skill/blob/46f764d85209544f291dd4c24b0cccfcd13f9659/docs/live-connection-verification.json)记录了目标确认、临时授权、SSH 接入、复用既有 OpenClaw 完成合成小任务和撤销访问。落地借鉴这个先确认、再验证、最后交接的顺序，不复制真实目标资料或凭据。
+本项目的隔离示例记录覆盖 Windows 沙箱内的配置包安装、更新、覆盖保留与中断恢复，见[安装记录](installation-verification.json)。Windows / Mac 准备清单用于规划，各系统、目标电脑与运行器的实际结果分别记录。
 
-该记录针对 Windows 与已有运行器，不是 Mac 实测，也不是全新安装证明。落地的执行器和权限边界维持原状；Windows 示例通过和 Mac 流程支持分别报告，不能把其他项目的结果写成本项目已完成的安装。
+交接时区分准备计划、安装结果、运行器加载和首项任务。没有本次目标的证据，就保留对应缺口；示例结果不能代替客户环境验收。
 
 ## 可执行的只读分流
 

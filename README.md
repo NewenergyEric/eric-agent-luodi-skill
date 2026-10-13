@@ -23,8 +23,6 @@
 | 接手别人做了一半的项目 | “先检查做到哪里，从下一步继续” | 当前证据、缺口、下一项具体动作 |
 | 增加规则或 Skill | “看差异，保留客户原来的选择” | 变更范围、验收办法、恢复与接续记录 |
 
-如果是帮爱人、朋友准备个人电脑，可以从更口语化的[搭好](https://github.com/NewenergyEric/eric-dahao-agent-skill)开始。
-
 ## 三步开始
 
 **1. 在你自己的 Codex 中安装 Skill。** 把这段话复制给它：
@@ -87,8 +85,6 @@ $eric-agent-luodi-skill 我要为一个客户准备 Mac，默认 OpenClaw。
 
 ![环境、运行器、工作规则、任务与客户定制的交付示意](assets/readme/case-board-zh.png)
 
-需要协助另一台电脑接入时，使用独立的[搭好连接工作流](https://github.com/NewenergyEric/eric-dahao-agent-skill/tree/main/.agents/skills/eric-dahao-agent-skill)。凭据由原生客户端处理，连接资料只放本次私有记录；落地保留自身执行边界。
-
 <details>
 <summary>开发者：运行示例、验证和继续扩展</summary>
 
@@ -110,5 +106,3 @@ python -B tools/release.py check
 </details>
 
 [Skill 与写法来源](docs/skill-usage.md) · [发布规则](docs/publishing.md) · [安全说明](docs/security.md) · [第三方许可](THIRD_PARTY_NOTICES.md)
-
-原创内容采用 [Apache-2.0](LICENSE)，Copyright 2026 NewenergyEric and contributors。蓝色「落地」与粉色「搭好」分别维护。

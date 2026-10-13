@@ -1,6 +1,6 @@
 # 当前验证：Windows / Mac 准备流程
 
-本次将双语 README、七步清单首页、中文影片与字幕改为流程和用户价值表达，保持蓝色 FDE 字体与连续动效。对外介绍不再显示实现状态标签；技术范围与测试证据集中在此文档和支持矩阵。SSH / Mac 接入链接指向独立的搭好 Skill，落地的运行器、配方和固定来源未改变。用户确认搭好此前实测为 Windows；Mac 为流程支持。
+本次将双语 README、七步清单首页、中文影片与字幕改为流程和用户价值表达，保持蓝色 FDE 字体与连续动效。对外介绍不再显示实现状态标签；技术范围与测试证据集中在此文档和支持矩阵。SSH / Mac 引导用于整理接入计划，落地的运行器、配方和固定来源未改变。Windows 示例结果与 Mac 准备流程分别记录。
 
 | 范围 | 验证与证据 |
 |---|---|
@@ -11,4 +11,4 @@
 | 媒体 | 24 秒 MP4 30 FPS；GIF/WebP 20 FPS。字节与哈希见[媒体清单](media-manifest.json)，具体字体、视觉与播放结果见[媒体验证](media-validation.json) |
 | 发布 | 仅更新作者授权的私有 GitHub；当前源文件与提交树单独核对，许可证未代选 |
 
-既有基础证据保留在 [evidence.json](evidence.json) 和 [system-guide-evidence.json](system-guide-evidence.json)。影片的会议纪要任务是原创合成示意，不能替代真实 Agent 输出；借鉴搭好的具体范围见[参考说明](computer-guide.md#借鉴搭好的范围)。
+既有基础证据保留在 [evidence.json](evidence.json) 和 [system-guide-evidence.json](system-guide-evidence.json)。影片的会议纪要任务是原创合成示意，不能替代真实 Agent 输出；准备计划与实际结果的区分见[证据范围](computer-guide.md#交付证据的范围)。

@@ -29,6 +29,4 @@ FDE 关心目标是否对齐、客户定制是否保留、下一位工程师是�
 
 用户明确要运行仓库内配置示例时，再读[Windows 示例工作流](references/project-example.md)。核对完整项目位置，先 check，再 configure/update 预览并按具体 plan_id 执行；保留身份检查、来源 pin、恢复机制、客户覆盖与分层验收。不因安装了 Skill 就认为运行器或日常 Agent 已安装。
 
-完整项目提供 docs/getting-started.html 和 docs/installation-checklist.md 作可选参考，支持矩阵与证据在 docs/support-matrix.md。需要另一个连接工作流时可介绍独立的搭好，但不继承其他 Skill、目标或会话的授权。
-
-本 Skill 原创内容采用随包 [Apache-2.0](LICENSE)，Copyright 2026 NewenergyEric and contributors。
+完整项目提供 docs/getting-started.html 和 docs/installation-checklist.md 作可选参考，支持矩阵与证据在 docs/support-matrix.md。

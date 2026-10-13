@@ -48,8 +48,6 @@ The route is dependencies → network → Codex/IDE as needed → daily Agent �
 
 [Meeting-note input](examples/first-task/meeting-notes.md) → [Action-list example](examples/first-task/action-list.md). Check owners, deadlines and clearly identified missing information, then make sure the customer can continue independently.
 
-For helping family or friends with a personal computer, use [Dahao](https://github.com/NewenergyEric/eric-dahao-agent-skill), including its separate connection workflow.
-
 <details>
 <summary>Existing installations and other Agents</summary>
 
@@ -77,5 +75,3 @@ The example exercises installation, repeat execution, upgrades, override preserv
 </details>
 
 [Optional HTML checklist](docs/getting-started.html) · [Editorial references](docs/skill-usage.md) · [Security](docs/security.md) · [Third-party notices](THIRD_PARTY_NOTICES.md)
-
-Original content: [Apache-2.0](LICENSE), Copyright 2026 NewenergyEric and contributors. The blue Luodi brand and existing media remain in place.
