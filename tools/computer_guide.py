@@ -26,7 +26,7 @@ def plan(brief, action, customer, instance, host_os=None):
     location = select(target['location'], ('local', 'other', 'unknown'))
     system = select(target['os'], ('windows', 'macos', 'unknown'))
     access = select(target['access'], ('local', 'existing', 'none', 'unknown'))
-    agent = select(brief['agent'], ('codex', 'openclaw', 'hermes', 'undecided'))
+    agent = select(brief['agent'], ('codex', 'openclaw', 'hermes', 'dsh', 'undecided'))
     task = select(brief['first_task'], ('user_defined', 'to_define'))
     if (location == 'local' and access != 'local') or (location != 'local' and access == 'local'):
         cs.fail('inconsistent_target_access')

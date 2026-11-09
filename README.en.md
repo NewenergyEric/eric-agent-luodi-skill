@@ -87,3 +87,7 @@ The example exercises installation, repeat execution, upgrades, override preserv
 </details>
 
 [Optional HTML checklist](docs/getting-started.html) · [Editorial references](docs/skill-usage.md) · [Security](docs/security.md) · [Third-party notices](THIRD_PARTY_NOTICES.md)
+
+## Guided setup
+
+The Skill includes an offline [illustrated step guide](.agents/skills/eric-agent-luodi-skill/references/setup-guide.html). Prefer the controlling computer’s native SSH password prompt for a remote Mac. Reuse existing DSH installations and user-configured model credentials; distinguish user confirmation from verified model calls. The page collects no credentials and does not connect or install software.

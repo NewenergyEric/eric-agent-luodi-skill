@@ -26,6 +26,10 @@ SAFE_ROOT = {"README.md", "AGENTS.md", "THIRD_PARTY_NOTICES.md", "client_setup.p
              "sources.lock.json", "release-files.json", ".gitignore", ".gitattributes", "LICENSE",
              "README.en.md", "product-evidence.json", "showcase-files.json"}
 SKILL_FILES = {
+    '.agents/skills/eric-agent-luodi-skill/references/guided-setup.md',
+    '.agents/skills/eric-agent-luodi-skill/references/dsh.md',
+    '.agents/skills/eric-agent-luodi-skill/references/setup-guide.html',
+
     '.agents/skills/eric-agent-luodi-skill/LICENSE',
     '.agents/skills/eric-agent-luodi-skill/SKILL.md',
     '.agents/skills/eric-agent-luodi-skill/agents/openai.yaml',

@@ -55,6 +55,10 @@ $eric-agent-luodi-skill 我要为一个客户准备 Mac，默认 OpenClaw。
 
 </details>
 
+## 配置时跟着当前一步走
+
+[图文步骤卡](.agents/skills/eric-agent-luodi-skill/references/setup-guide.html)随 Skill 安装，可离线打开。每一步说明在哪台电脑、哪个窗口操作，以及怎样算完成。远程 Mac 优先在控制端原生 SSH 窗口输入密码；已安装的 DSH 和用户自行配置的模型直接接续，秘密留在客户端。
+
 ## 开始后会怎样
 
 下面是使用示例，展示交付过程中的分工：

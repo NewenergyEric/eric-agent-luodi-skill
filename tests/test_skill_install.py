@@ -22,8 +22,12 @@ class StandaloneSkillTests(unittest.TestCase):
             self.assertEqual((skill / 'LICENSE').read_bytes(), (cs.ROOT / 'LICENSE').read_bytes())
             self.assertFalse((root / 'client_setup.py').exists())
             count = 0
-            for path in skill.rglob('*.md'):
-                for link in re.findall(r'\]\(([^)]+)\)', path.read_text(encoding='utf-8')):
+            documents = [*skill.rglob('*.md'), *skill.rglob('*.html')]
+            for path in documents:
+                content = path.read_text(encoding='utf-8')
+                links = (re.findall(r'href="([^"]+)"', content) if path.suffix == '.html'
+                         else re.findall(r'\]\(([^)]+)\)', content))
+                for link in links:
                     parsed = urlsplit(link)
                     if parsed.scheme or not parsed.path:
                         continue
