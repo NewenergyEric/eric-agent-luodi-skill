@@ -3,7 +3,7 @@
 先读 README.md 和 .agents/skills/eric-agent-luodi-skill/SKILL.md。本机若有 DELIVERY.md 或 OPEN_SOURCE_PREP.md，再读作私有接续记录；公共制品不包含它们。
 用户入口仅 configure / check / update；执行仍只支持 Windows、本项目沙箱和合成示例包。--brief 增加 Windows/Mac、本机/另一台的只读引导，不等于支持安装。保留 FDE 定位、蓝色叙事与既有媒体。
 不读取或复制既有凭据、订阅、cookie、聊天或客户数据；凭据仅引用。
-不连接客户机器、全局安装、启停 Agent、改代理/TUN/防火墙/SSH或部署客户目标。本项目原创内容已由作者确认采用 Apache-2.0 并公开；后续发布继续逐项审核来源、版权与敏感资料，变更许可仍由作者决定。
+本仓库运行器不连接客户机器、全局安装、启停 Agent、改代理/TUN/防火墙/SSH或部署客户目标。Skill 可引导宿主使用用户已授权的现有工具，不能将宿主能力误称为仓库运行器已实现的适配。本项目原创内容已由作者确认采用 Apache-2.0 并公开；后续发布继续逐项审核来源、版权与敏感资料，变更许可仍由作者决定。
 公共包经源码审核后显式更新 recipe 和 sources.lock.json，禁止运行时自动重新 pin。
 客户覆盖只合并用户明确更改的键，不用公共模板重写整个文件。
 使用 Python 标准库。修改后运行 `python -B -m unittest discover -s tests -v`；发布准备运行 `python -B tools/release.py check`。

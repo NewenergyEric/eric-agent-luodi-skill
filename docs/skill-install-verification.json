@@ -1,29 +1,39 @@
 {
   "schema": 1,
-  "date": "2026-10-13",
+  "date": "2026-11-09",
   "skill": "eric-agent-luodi-skill",
   "scope": "standalone_skill_structure_relocation_and_project_regression",
-  "skill_files": 6,
-  "structure_validator": "metadata_and_license_checks_passed",
+  "skill_files": 9,
+  "structure_validator": "existing_metadata_and_license_preserved",
   "relative_reference_closure": "passed",
-  "relative_links_checked": 8,
+  "relative_links_checked": 26,
   "source_sha256": {
-    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
-    "SKILL.md": "cc12829e145d311280c39753fdc4600f3ac3bda6ec336059d086513ca0f2b33f",
     "agents/openai.yaml": "f95b7131a1ed191dd66ec53e53fd57179da04d4aaee1df51ffd73c6191ad3f62",
-    "references/installation-checklist.md": "14fddaf3fc0981c3770470b2152cb3f1d45b7ef846e046f113eb5c262680eb5d",
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "references/dsh.md": "4f40d817846cdb5110636e7d25a229d434b7a57c8bdcb337d2823f244b220c42",
+    "references/guided-setup.md": "567e5d7be7ee81c6cf964aaba4dd0b605154a13548929809875ac3e4e8c440ef",
+    "references/installation-checklist.md": "485e944a04a837a36ace87fe1d4eecc041f8a596624372c429802dfdb9dcb59d",
     "references/project-example.md": "13c384f64dbbc89578325cb6f04beb08a8a0812747ac1b88cecce2e02a0d1cfe",
-    "references/verification-checklist.md": "18bc86aa347a8d0323372cef13ea9c034e750d09046f3b07ce8908703ab5d05b"
+    "references/setup-guide.html": "09191d3c97ebefeb46f4d4ba2f0c65536054ff38c28490ec8e46a666fa69e164",
+    "references/verification-checklist.md": "cd47530a17704e768c0993b6af4fd10136e1c142d3df643f13d6976a401512de",
+    "SKILL.md": "c18460f85fe2310501f5cc33b3bd93a4994933809106015fc5b4c67ae46ab0eb"
   },
   "runtime_or_target_installation_claimed": false,
   "project_regression": {
     "command": "python -B -m unittest discover -s tests -v",
-    "tests": 62,
+    "tests": 63,
     "status": "passed"
   },
   "standalone_relocation": "passed",
-  "isolated_project_demo": "passed",
+  "isolated_project_demo": "not_rerun_in_this_revision",
   "license_included": "Apache-2.0",
-  "revision_scope": "Windows/Mac field acceptance checklist added; executor scope unchanged.",
-  "notes": "Relocated planning references work without a repository or webpage. The bundled executor still requires the complete Windows project."
+  "revision_scope": "Controller-side SSH guidance, offline illustrated steps, DSH planning and user-configured credential handoff. No real-machine installer added.",
+  "notes": "Standalone Markdown and HTML references pass relocation checks. Browser checks passed: step confirmation, model navigation, 390px viewport without horizontal page overflow, and no input/textarea fields. No remote reconnection or model call performed in this revision.",
+  "browser_guidance": {
+    "status": "passed",
+    "viewport_width": 390,
+    "step_confirmation_advances": true,
+    "secret_input_fields": 0,
+    "illustrations": "original_diagrams_not_screenshots"
+  }
 }

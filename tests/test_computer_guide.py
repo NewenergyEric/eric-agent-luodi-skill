@@ -17,6 +17,17 @@ def brief(location='local', system='windows', access='local'):
 
 
 class ComputerGuideTests(unittest.TestCase):
+    def test_dsh_planning_does_not_claim_installation_or_read_credentials(self):
+        value = brief('other', 'macos', 'existing')
+        value['agent'] = 'dsh'
+        with patch.object(cs, 'Engine', side_effect=AssertionError('must not deploy')):
+            result = guide.plan(value, 'check', 'sample', 'desk', host_os='Windows')
+        self.assertEqual(result['agent'], 'dsh')
+        self.assertFalse(result['target_inspected'])
+        self.assertFalse(result['deployment_ready'])
+        self.assertFalse(result['changes_applied'])
+        self.assertIn('real_agent_adapter_not_implemented', result['blockers'])
+
     def test_local_windows_uses_local_executor_without_claiming_installation(self):
         result = guide.plan(brief(), 'configure', 'sample', 'desk', host_os='Windows')
         self.assertEqual(result['access_route'], 'local_executor_no_ssh_needed')

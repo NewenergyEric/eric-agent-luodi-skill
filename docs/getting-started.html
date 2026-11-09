@@ -6,6 +6,7 @@
 @media(max-width:600px){main{padding:22px 18px 35px}.brand{font-size:22px}h1{font-size:27px;margin-top:26px}.intro{font-size:14px}.choices{grid-template-columns:1fr 1fr;padding:13px;gap:11px}.steps>li{padding:16px 13px;gap:11px;grid-template-columns:22px 1fr}.step-top{flex-wrap:wrap;gap:5px}h2{font-size:16px}.status{margin-left:25px}.links{gap:9px;font-size:11px}.done{width:20px;height:20px}.toolbar button{flex:1 1 auto}}
 @media print{main{padding:0;max-width:none}body{background:white}.toolbar,.notice,.links{display:none}h1{margin-top:15px;font-size:25px}.choices{padding:10px}.steps>li{break-inside:avoid;padding:12px}.review{break-inside:avoid}footer{margin-top:15px}.note{font-size:10px}}
 </style></head><body><a class="skip" href="#checklist">跳到清单</a><main><header><span class="brand">落地 · luodi</span><nav class="links" aria-label="相关资料"><a href="../README.md">项目介绍</a><a href="watch.html">介绍短片</a><a href="installation-checklist.md">文字版</a><a href="#fde-projects">FDE 与工具</a><a href="https://github.com/NewenergyEric/eric-agent-luodi-skill">GitHub</a></nav></header>
+<p class="note"><a href="../.agents/skills/eric-agent-luodi-skill/references/setup-guide.html">打开逐步图文引导 →</a> · 控制端 SSH、网络、模型配置和验证，每次只做当前一步。</p>
 <h1>把客户交付，做成一张能接手的清单。</h1><p class="intro">给 FDE 和实施顾问：先说清第一件任务，再按 Windows / Mac 路线准备环境、规则与 Skills，保留客户定制，留下验收与接续。</p>
 <details class="review"><summary>第一次使用：先安装 Skill，再复制一句话</summary><p>把下面的安装入口交给帮助者正在使用的 Agent，审阅后安装完整目录；本页不执行安装。</p><pre>帮我安装这个 Skill：
 https://github.com/NewenergyEric/eric-agent-luodi-skill/tree/main/.agents/skills/eric-agent-luodi-skill</pre><p>装好后，在对话中发送：</p><pre>$eric-agent-luodi-skill 为客户规划 Agent 交付。第一件任务是把会议纪要整理成行动清单；先给我步骤、完成条件和客户需要参与的地方。</pre><p>已有信息直接沿用，不确定的部分让 Agent 带着确认。<a href="../README.md">完整上手说明</a></p></details>
@@ -14,7 +15,7 @@ https://github.com/NewenergyEric/eric-agent-luodi-skill/tree/main/.agents/skills
 <label>执行位置<select id="location"><option value="local">就在这台</option><option value="other">另一台电脑</option></select></label>
 <label>网络通路<select id="network"><option value="existing">已有可用通路 / 直连</option><option value="clash">Clash Verge Rev</option><option value="other">用户指定其他工具</option></select></label>
 <label>准备工具 / IDE<select id="workspace"><option value="codex">Codex</option><option value="vscode">VS Code + Agent 扩展</option><option value="cursor">Cursor</option><option value="existing">复用现有工具</option></select></label>
-<label>日常 Agent<select id="agent"><option value="openclaw">OpenClaw（默认）</option><option value="hermes">Hermes</option><option value="other">用户指定其他 Agent</option></select></label>
+<label>日常 Agent<select id="agent"><option value="openclaw">OpenClaw（默认）</option><option value="hermes">Hermes</option><option value="dsh">DeepSeek Harness（DSH）</option><option value="other">用户指定其他 Agent</option></select></label>
 <label>第一批 Skills<select id="skills"><option value="minimal">只安装第一件任务所需</option><option value="specified">用户指定的审核清单</option><option value="existing">检查现有 Skills</option></select></label>
 </div><p class="route-note" id="route-note" aria-live="polite">先检查当前电脑，再按选择准备。勾选只记录人工进度，不会运行安装。</p>
 <p class="note">先选系统与执行位置，按实际需要准备。<a href="computer-guide.md#系统准备与验收">分系统准备</a> · <a href="computer-guide.md#ssh-与-mac-尝试入口">远程接入与 Mac 准备</a>。</p><div class="progress-row"><span id="count" aria-live="polite">0 / 7 项已确认</span><progress id="progress" max="7" value="0" aria-label="安装清单进度"></progress></div>
@@ -45,11 +46,11 @@ function save(){try{localStorage.setItem(key,JSON.stringify({choices:Object.from
 function update(){const n=boxes.filter(b=>b.checked).length;$('progress').value=n;$('count').textContent=n+' / 7 项已确认';}
 function route(){const a=$('agent').value,n=$('network').value,w=$('workspace').value,s=$('skills').value,mac=$('system').value==='mac';
 $('env-system-note').textContent=mac?'Mac：先确认 macOS、Apple 芯片或 Intel、终端与目录权限，选择匹配架构的工具。':'Windows：先确认系统版本、架构与实际运行方式，保留已有可用工具。';
-$('env-summary').textContent=a==='openclaw'?'检查 Git、Node.js 和 Python，按 OpenClaw 选定版本补齐依赖。':a==='hermes'?'检查 Git、Python / uv 等依赖，按 Hermes 选定版本的官方要求准备。':'先确认用户指定 Agent 的依赖清单，再检查已有环境。';
+$('env-summary').textContent=a==='openclaw'?'检查 Git、Node.js 和 Python，按 OpenClaw 选定版本补齐依赖。':a==='dsh'?'先核对已有 DSH 桌面版或 CLI；只按所选发行版补依赖，保留已配置的模型。':a==='hermes'?'检查 Git、Python / uv 等依赖，按 Hermes 选定版本的官方要求准备。':'先确认用户指定 Agent 的依赖清单，再检查已有环境。';
 $('network-summary').textContent=n==='clash'?'准备 Clash Verge Rev；订阅只在用户自己的客户端中配置。':n==='other'?'沿用用户指定的网络工具，核实版本与实际通路。':'先试已有网络；能访问所需服务，就复用或跳过安装。';
 $('workspace-summary').textContent={codex:'使用 Codex 带着准备电脑；已有可用工具时直接打开项目。',vscode:'使用 VS Code，并选择所需的 Agent 扩展。',cursor:'使用 Cursor，登录并打开当前项目。',existing:'复用已有准备工具，先检查项目权限和最小任务。'}[w];
-$('agent-summary').textContent=a==='openclaw'?'默认 OpenClaw；按官方入口安装所选发行版，再验证实际运行。':a==='hermes'?'选择 Hermes；采用它自己的安装和配置路径，重新核对完成项。':'先确定 Agent 名称、官方来源和版本，再形成安装计划。';
-const link=$('agent-source');link.hidden=a==='other';link.href=a==='hermes'?'https://hermes-agent.nousresearch.com/docs':'https://docs.openclaw.ai/install';link.textContent=a==='hermes'?'打开 Hermes 官方安装说明':'打开 OpenClaw 官方安装说明';
+$('agent-summary').textContent=a==='openclaw'?'默认 OpenClaw；按官方入口安装所选发行版，再验证实际运行。':a==='dsh'?'复用已安装的 DeepSeek Harness，区分应用启动、用户已配置 Key 和真实调用结果。':a==='hermes'?'选择 Hermes；采用它自己的安装和配置路径，重新核对完成项。':'先确定 Agent 名称、官方来源和版本，再形成安装计划。';
+const link=$('agent-source');link.hidden=a==='other';link.href=a==='dsh'?'https://www.deepseek.com/en/harness/':a==='hermes'?'https://hermes-agent.nousresearch.com/docs':'https://docs.openclaw.ai/install';link.textContent=a==='dsh'?'打开 DeepSeek 官方 Harness':a==='hermes'?'打开 Hermes 官方安装说明':'打开 OpenClaw 官方安装说明';
 $('skills-summary').textContent=s==='minimal'?'先装第一件任务需要的少量 Skills，核对来源、版本和依赖。':s==='specified'?'按用户明确指定并审核的列表安装，逐个验证加载。':'先检查现有 Skills 的来源、版本与加载状态，按差异更新。';
 $('route-note').textContent=(mac?'Mac：先核对 macOS、芯片、终端与目录权限。':'Windows：先核对系统、架构与实际运行方式。')+($('location').value==='other'?' 另一台电脑先确认目标与接入方式，参照 SSH / Mac 入口；本页只记录清单。':' 勾选仅记录人工进度，不运行安装。');}
 try{const data=JSON.parse(localStorage.getItem(key)||'{}');for(const id of ids){const value=data.choices&&data.choices[id];if([...$(id).options].some(o=>o.value===value))$(id).value=value;}boxes.forEach(b=>b.checked=data.checked&&data.checked[b.dataset.step]===true);}catch{say('本地存储不可用，仍可下载清单。');}route();update();
